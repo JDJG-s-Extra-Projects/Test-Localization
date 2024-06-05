@@ -1,0 +1,15 @@
+{
+    "name": {"text": "convert_temperature"},
+    "command_desc": {"text": "温度を変換します:"},
+    "title" : {"text": "温度:"},
+    "c_name" : {"text": "摂氏:"},
+    "f_name" : {"text": "華氏:"},
+    "k_name" : {"text": "ケルビン:"},
+    "r_name" : {"text": "ランキン度:"},
+    "desc" : {"text": "選択:"},
+    "c_symbol" : {"text": "°C"},
+    "f_symbol" : {"text": "°F"},
+    "k_symbol" : {"text": "°K"},
+    "r_symbol" : {"text": "°R"},
+    "translator_id" : "1163416356566347828"
+}

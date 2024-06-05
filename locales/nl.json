@@ -1,0 +1,15 @@
+{
+    "name": {"text": "temperatuur_omrekenen"},
+    "command_desc": {"text": "Een command om temperaturen naar andere schalen om te rekenen"},
+    "title" : {"text": "Temperatuur:"},
+    "c_name" : {"text": "Celsius:"},
+    "f_name" : {"text": "Fahrenheit:"},
+    "k_name" : {"text": "Kelvin:"},
+    "r_name" : {"text": "Rankine:"},
+    "desc" : {"text": "gekozen:"},
+    "c_symbol" : {"text": "°C"},
+    "f_symbol" : {"text": "°F"},
+    "k_symbol" : {"text": "°K"},
+    "r_symbol" : {"text": "°R"},
+    "translator_id" : "171539705043615744"
+}
