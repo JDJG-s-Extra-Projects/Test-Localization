@@ -1,0 +1,30 @@
+{
+    "convert_temperature": {
+        "name": "convert_temperatuur",
+        "description": "Een command om temperaturen naar verschillende schalen om te zetten",
+        "options": {
+            "temp_system": {
+                "name": null,
+                "description": null
+            },
+            "temperature": {
+                "name": null,
+                "description": null
+            }
+        },
+        "embeds": [
+            {
+                "title": "तापमान:",
+                "fields": [
+                    {"name": "Celsius:", "value": "{temp_celsius} °C"},
+                    {"name": "Fahrenheit:", "value": "{temp_fahrenheit} °F"},
+                    {"name": "Kelvin:", "value": "{temp_kelvin} °K"},
+                    {"name": "Rakine:", "value": "{temp_rankine} °R"}
+                ],
+                "footer": {
+                    "text": "Gekozen: {temp_system_value}"
+                }
+            }
+        ]
+    }
+}
