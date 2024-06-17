@@ -7,6 +7,6 @@ authors = ["JDJG <jdjgbot@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.11.0,<4.0"
-discord-py = {extras = ["speed", "voice"], version = ">=2.3.2"}
-python-dotenv = "^1.0.1"
+discord-py = {git="https://github.com/Rapptz/discord.py.git", extras = ["speed", "voice"]}
+python-dotenv = ">=1.0.1"
 jishaku = {git = "https://github.com/Gorialis/jishaku.git"}
