@@ -1,6 +1,7 @@
 import enum
 from typing import TYPE_CHECKING, Any, NamedTuple
 
+from discord.app_commands import locale_str
 
 class TemperatureReadings(NamedTuple):
     celsius: int
@@ -8,12 +9,11 @@ class TemperatureReadings(NamedTuple):
     kelvin: int
     rankine: int
 
-
 class Temperature(enum.Enum):
-    celsius = "Celsius"
-    fahrenheit = "Fahrenheit"
-    kelvin = "Kelvin"
-    rankine = "Rankine"
+    celsius = locale_str("Celsius", command="convert_temperature", index=0)
+    fahrenheit = locale_str("Fahrenheit", command="convert_temperature", index=1)
+    kelvin = locale_str("Kelvin", command="convert_temperature", index=2)
+    rankine = locale_str("Rankine", command="convert_temperature", index=3)
 
     def convert_to(self, value: float) -> TemperatureReadings:
         match self:
