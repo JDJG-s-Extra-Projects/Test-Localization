@@ -4,6 +4,7 @@ import logging
 import os
 from typing import Any, Optional
 
+import discord
 from discord.ext import commands
 from dotenv import load_dotenv
 
@@ -30,5 +31,6 @@ bot = JDBot(
     allowed_mentions=discord.AllowedMentions(everyone=False, roles=False),
 )
 
+load_dotenv()
 logging.basicConfig(level=logging.INFO)
 bot.run(os.environ["TOKEN"])
