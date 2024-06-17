@@ -43,7 +43,7 @@ class Extra(commands.Cog):
         embed = discord.Embed(title="Temperature:", color=color)
         embed.add_field(name="Celsius:", value="{temp_celsius} °C")
         embed.add_field(name="Fahrenheit:", value="{temp_fahrenheit} °F")
-        embed.add_field(name="Kelvin:", value="{temp_kelvin} °K")
+        embed.add_field(name="Kelvin:", value="{temp_kelvin} K")
         embed.add_field(name="Rankine:", value="{temp_rankine} °R")
         embed.set_footer(text="Chose: {temp_system_value}")
 

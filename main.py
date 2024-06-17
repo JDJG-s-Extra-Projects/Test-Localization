@@ -31,6 +31,13 @@ bot = JDBot(
     allowed_mentions=discord.AllowedMentions(everyone=False, roles=False),
 )
 
+
+@bot.event
+async def on_ready():
+    print(bot.user)
+    print(bot.user.id)
+
+
 load_dotenv()
 logging.basicConfig(level=logging.INFO)
 bot.run(os.environ["TOKEN"])
