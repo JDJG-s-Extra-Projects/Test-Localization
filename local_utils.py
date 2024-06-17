@@ -1,6 +1,7 @@
 import enum
 from typing import TYPE_CHECKING, Any, NamedTuple
 
+
 class TemperatureReadings(NamedTuple):
     celsius: int
     fahrenheit: int

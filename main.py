@@ -1,20 +1,24 @@
 from __future__ import annotations
-from typing import Any, Optional
+
 import logging
 import os
+from typing import Any, Optional
 
 from discord.ext import commands
+from dotenv import load_dotenv
 
 from command_tree import JDCommandTranslator, JDCommandTree
 
 
 class JDBot(commands.Bot):
     tree: JDCommandTree  # type: ignore
+
     def __init__(self, *args: Any, **kwargs: Any) -> None:
         super().__init__(*args, **kwargs)
 
     async def setup_hook(self) -> None:
         await self.tree.set_translator(JDCommandTranslator())
+
 
 intents = discord.Intents.all()
 

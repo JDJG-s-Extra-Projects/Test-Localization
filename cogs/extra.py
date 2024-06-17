@@ -7,11 +7,12 @@ from local_utils import Temperature
 if typing.TYPE_CHECKING:
     from main import JDBot
 
+
 class Extra(commands.Cog):
     "Uncategorized Commands, these are more random commands"
 
     def __init__(self, bot: JDBot):
-            self.bot: JDBot = bot
+        self.bot: JDBot = bot
 
     @app_commands.user_install()
     @app_commands.allowed_contexts(guilds=True, dms=True, private_channels=True)
@@ -33,7 +34,6 @@ class Extra(commands.Cog):
         if temps.celsius > 30:
             color = 0xFF0000
 
-        
         temp_celsius = f"{temps.celsius:,}"
         temp_fahrenheit = f"{temps.fahrenheit:,}"
         temp_kelvin = f"{temps.kelvin:,}"
@@ -46,14 +46,15 @@ class Extra(commands.Cog):
         embed.add_field(name="Kelvin:", value="{temp_kelvin} °K")
         embed.add_field(name="Rankine:", value="{temp_rankine} °R")
         embed.set_footer(text="Chose: {temp_system_value}")
-        
+
         embeds = await self.bot.tree.translator.translate_embeds(
-            interaction, [embed],
+            interaction,
+            [embed],
             temp_celsius=temp_celsius,
             temp_fahrenheit=temp_fahrenheit,
             temp_kelvin=temp_kelvin,
-            temp_rankine=temp_rankine, 
-            temp_system_value=temp_system_value
+            temp_rankine=temp_rankine,
+            temp_system_value=temp_system_value,
         )
         await interaction.response.send_message(embeds=embeds)
 
