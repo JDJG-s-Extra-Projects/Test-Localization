@@ -22,11 +22,11 @@ class JDBot(commands.Bot):
     async def setup_hook(self) -> None:
         await self.tree.set_translator(JDCommandTranslator())
 
-    for cog in EXTENSIONS:
-        try:
-            await self.load_extension(f"{cog}")
-        except commands.errors.ExtensionError:
-            traceback.print_exc()
+        for cog in EXTENSIONS:
+            try:
+                await self.load_extension(f"{cog}")
+            except commands.errors.ExtensionError:
+                traceback.print_exc()
 
 
 intents = discord.Intents.all()
