@@ -1,0 +1,12 @@
+[tool.poetry]
+name = "TestLocalization"
+version = "0.1.0"
+description = ""
+license = "MIT"
+authors = ["JDJG <jdjgbot@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.11.0,<4.0"
+discord-py = {extras = ["speed", "voice"], version = ">=2.3.2"}
+python-dotenv = "^1.0.1"
+jishaku = {git = "https://github.com/Gorialis/jishaku.git"}
