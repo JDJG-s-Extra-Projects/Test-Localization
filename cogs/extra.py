@@ -25,7 +25,7 @@ class Extra(commands.Cog):
     @app_commands.describe(temp_system="Select a Unit Temperature from the dropdown.")
     @app_commands.describe(temperature="Please enter a number")
     @app_commands.command(description="A command to convert temperatures to different scales")
-    @app_commanda.choices(
+    @app_commands.choices(
     temp_system=[
         Choice(name=locale_str("Celsius", command="convert_temperature", index=0), value="Celsius"),
         Choice(name=locale_str("Fahrenheit", command="convert_temperature", index=1), value="Fahrenheit"),
