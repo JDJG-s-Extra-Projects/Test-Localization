@@ -1,6 +1,6 @@
 {
-    "name": "तापमान_परिवर्तन",
-    "description": "तापमान को विभिन्न पैमानों में परिवर्तित करने हेतु एक कमांड।",
+    "name": "convert_temperature",
+    "description": "一个可以转换温度至不同温标的指令",
     "options": {
         "temp_system": {
             "name": null,
@@ -12,27 +12,27 @@
         }
     },
     "embeds": {
-        "title": "तापमान_परिवर्तन",
+        "title": "convert_temperature",
         "fields": [
             {
-                "name": "सेल्सियस:",
+                "name": "摄氏度：",
                 "value": "{temp_celsius} °C"
             },
             {
-                "name": "फ़ारेनहाइ:",
+                "name": "华氏度",
                 "value": "{temp_fahrenheit} °F"
             },
             {
-                "name": "केल्विन:",
+                "name": "开尔文：",
                 "value": "{temp_kelvin} K"
             },
             {
-                "name": "रैंकिन:",
+                "name": "兰氏温标：",
                 "value": "{temp_rankine} °R"
             }
         ],
         "footer": {
-            "text": "अपनी पसंद चुनें: {temp_system_value}"
+            "text": "请选择： {temp_system_value}"
         }
     }
 }

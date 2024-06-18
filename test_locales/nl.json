@@ -1,30 +1,38 @@
 {
-    "convert_temperature": {
-        "name": "convert_temperatuur",
-        "description": "Een command om temperaturen naar verschillende schalen om te zetten",
-        "options": {
-            "temp_system": {
-                "name": null,
-                "description": null
-            },
-            "temperature": {
-                "name": null,
-                "description": null
-            }
+    "name": "temperatuur_omrekenen",
+    "description": "Een command om temperaturen naar andere schalen om te rekenen",
+    "options": {
+        "temp_system": {
+            "name": null,
+            "description": null
         },
-        "embeds": [
+        "temperature": {
+            "name": null,
+            "description": null
+        }
+    },
+    "embeds": {
+        "title": "temperatuur_omrekenen",
+        "fields": [
             {
-                "title": "तापमान:",
-                "fields": [
-                    {"name": "Celsius:", "value": "{temp_celsius} °C"},
-                    {"name": "Fahrenheit:", "value": "{temp_fahrenheit} °F"},
-                    {"name": "Kelvin:", "value": "{temp_kelvin} K"},
-                    {"name": "Rakine:", "value": "{temp_rankine} °R"}
-                ],
-                "footer": {
-                    "text": "Gekozen: {temp_system_value}"
-                }
+                "name": "Celsius:",
+                "value": "{temp_celsius} °C"
+            },
+            {
+                "name": "Fahrenheit:",
+                "value": "{temp_fahrenheit} °F"
+            },
+            {
+                "name": "Kelvin:",
+                "value": "{temp_kelvin} K"
+            },
+            {
+                "name": "Rankine:",
+                "value": "{temp_rankine} °R"
             }
-        ]
+        ],
+        "footer": {
+            "text": "gekozen: {temp_system_value}"
+        }
     }
 }

@@ -1,6 +1,6 @@
 {
-    "name": "तापमान_परिवर्तन",
-    "description": "तापमान को विभिन्न पैमानों में परिवर्तित करने हेतु एक कमांड।",
+    "name": "convert_temperature",
+    "description": "A command to convert temperatures to different scales",
     "options": {
         "temp_system": {
             "name": null,
@@ -12,27 +12,27 @@
         }
     },
     "embeds": {
-        "title": "तापमान_परिवर्तन",
+        "title": "convert_temperature",
         "fields": [
             {
-                "name": "सेल्सियस:",
+                "name": "Celsius:",
                 "value": "{temp_celsius} °C"
             },
             {
-                "name": "फ़ारेनहाइ:",
+                "name": "Fahrenheit:",
                 "value": "{temp_fahrenheit} °F"
             },
             {
-                "name": "केल्विन:",
+                "name": "Kelvin:",
                 "value": "{temp_kelvin} K"
             },
             {
-                "name": "रैंकिन:",
+                "name": "Rankine:",
                 "value": "{temp_rankine} °R"
             }
         ],
         "footer": {
-            "text": "अपनी पसंद चुनें: {temp_system_value}"
+            "text": "Chose: {temp_system_value}"
         }
     }
 }
