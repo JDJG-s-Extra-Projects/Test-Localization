@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import os
+import pathlib
 from typing import Any, NotRequired, TypedDict
 
 try:
@@ -67,13 +67,16 @@ class JDCommandTranslator(app_commands.Translator):
         self.cached_locales: dict[discord.Locale, dict[str, LocaleCommand]] = {}
 
     async def load(self) -> None:
-        for file in os.listdir(self.LOCALS_PATH):
-            if file.endswith(".json"):
-                try:
-                    locale = discord.Locale(file.split(".")[0])
-                except ValueError:
-                    raise ValueError(f"Invalid locale file {file}. Expected a file like `en-US.json`.")
-                    # I should tell soheab to tell the user that it will use the english us locale as a default because that way it still functions.
+
+        locale_directory = pathlib.Path(self.LOCALS_PATH)
+        files = list(locale_directory.rglob("*.json"))
+
+        for file in files:
+            try:
+                locale = discord.Locale(file.stem)
+            except ValueError:
+                raise ValueError(f"Invalid locale file {file}. Expected a file like `en-US.json`.")
+                # I should tell soheab to tell the user that it will use the english us locale as a default because that way it still functions.
 
                 self.LOCALE_TO_FILE[locale] = file
                 await self.get_locale(locale)
