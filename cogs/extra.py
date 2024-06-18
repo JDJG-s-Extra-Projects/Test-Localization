@@ -6,9 +6,8 @@ import traceback
 import discord
 from discord import app_commands
 from discord.ext import commands
-from discord.app_commands import Choice, locale_str
 
-from local_utils import Temperature
+from local_utils import Temperature, locale_choices
 
 if typing.TYPE_CHECKING:
     from main import JDBot
@@ -29,29 +28,16 @@ class Extra(commands.Cog):
         description="A command to convert temperatures to different scales"
     )
     @app_commands.choices(
-        temp_system=[
-            Choice(
-                name=locale_str("Celsius", key="convert_temperature:temp_system:0"),
-                value="celsius",
-            ),
-            Choice(
-                name=locale_str("Fahrenheit", key="convert_temperature:temp_system:1"),
-                value="fahrenheit",
-            ),
-            Choice(
-                name=locale_str("Kelvin", key="convert_temperature:temp_system:2"),
-                value="kelvin",
-            ),
-            Choice(
-                name=locale_str("Rankine", key="convert_temperature:temp_system:3"),
-                value="rankine",
-            ),
-        ]
+        temp_system=locale_choices(
+            {"Celsius": "celsius", "Fahrenheit": "fahrenheit", "Kelvin": "kelvin", "Rankine": "rankine"},
+            command_name="convert_temperature",
+            option_name="temp_system",
+        )
     )
     async def convert_temperature(
         self,
         interaction: discord.Interaction[JDBot],
-        temp_system: Choice[str],
+        temp_system: app_commands.Choice[str],
         temperature: float,
     ):
         temps = Temperature(temp_system.value).convert_to(temperature)
