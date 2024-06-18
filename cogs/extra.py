@@ -40,7 +40,7 @@ class Extra(commands.Cog):
         temp_system: app_commands.Choice[str],
         temperature: float,
     ):
-        temps = Temperature(temp_system.value).convert_to(temperature)
+        temps = Temperature[temp_system.value].convert_to(temperature)
 
         if temps.celsius < 20:
             color = 0x0000FF
