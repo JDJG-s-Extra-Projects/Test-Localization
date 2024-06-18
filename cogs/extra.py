@@ -25,6 +25,13 @@ class Extra(commands.Cog):
     @app_commands.describe(temp_system="Select a Unit Temperature from the dropdown.")
     @app_commands.describe(temperature="Please enter a number")
     @app_commands.command(description="A command to convert temperatures to different scales")
+    @app_commanda.choices(
+    temp_system=[
+        Choice(name=locale_str("Celsius"), value="Celsius"),
+        Choice(name=locale_str("Fahrenheit"), value="Fahrenheit"),
+        Choice(name=locale_str("Kelvin"), value="Kelvin"),
+        Choice(name=locale_str("Rankine"), value="Rankine"),
+    ])
     async def convert_temperature(
         self,
         interaction: discord.Interaction,
