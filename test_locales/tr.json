@@ -14,7 +14,7 @@
         },
         "embeds": [
             {
-                "title": "sıcaklık_dönüştür",
+                "title": "Sıcaklık:",
                 "fields": [
                     {
                         "name": "Santigrat:",

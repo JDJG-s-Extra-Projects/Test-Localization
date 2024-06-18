@@ -14,7 +14,7 @@
         },
         "embeds": [
             {
-                "title": "convert_temperature",
+                "title": "温度:",
                 "fields": [
                     {
                         "name": "摂氏:",

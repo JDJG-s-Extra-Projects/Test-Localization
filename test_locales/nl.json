@@ -14,7 +14,7 @@
         },
         "embeds": [
             {
-                "title": "temperatuur_omrekenen",
+                "title": "Temperatuur:",
                 "fields": [
                     {
                         "name": "Celsius:",

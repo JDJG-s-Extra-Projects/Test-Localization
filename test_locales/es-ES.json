@@ -14,7 +14,7 @@
         },
         "embeds": [
             {
-                "title": "convertir_temperatura",
+                "title": "Temperatura:",
                 "fields": [
                     {
                         "name": "Celcius:",
