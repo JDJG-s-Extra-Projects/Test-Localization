@@ -28,6 +28,17 @@ class JDBot(commands.Bot):
             except commands.errors.ExtensionError:
                 traceback.print_exc()
 
+    async def try_user(self, id: int, /) -> Optional[discord.User]:
+        maybe_user = self.get_user(id)
+
+        if maybe_user is not None:
+            return maybe_user
+
+        try:
+            return await self.fetch_user(id)
+        except discord.errors.NotFound:
+            return None
+
 
 intents = discord.Intents.all()
 
