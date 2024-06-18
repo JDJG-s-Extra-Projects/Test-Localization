@@ -4,12 +4,12 @@
         "description": "Ett kommando för att konvertera temperaturer till olika skalor",
         "options": {
             "temperature_unit": {
-                "name": "temperatur_enhet",
-                "description": "Välj en temperaturenhet från menyn"
+                "name": null,
+                "description": null
             },
             "temperature": {
-                "name": "temperatur",
-                "description": "Var god och mata in ett nummer"
+                "name": null,
+                "description": null
             }
         },
         "embeds": [
@@ -34,7 +34,7 @@
                     }
                 ],
                 "footer": {
-                    "text": "Valde: {temp_system_value}"
+                    "text": "Valde: {temperature_unit_value}"
                 }
             }
         ],

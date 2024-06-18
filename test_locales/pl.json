@@ -34,7 +34,7 @@
                     }
                 ],
                 "footer": {
-                    "text": "Wybrane: {temp_system_value}"
+                    "text": "Wybrane: {temperature_unit_value}"
                 }
             }
         ],
