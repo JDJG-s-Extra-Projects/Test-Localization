@@ -153,6 +153,19 @@ class JDCommandTranslator(app_commands.Translator):
             elif isinstance(context.data, discord.app_commands.Parameter):
                 command_name = context.data.command.qualified_name
 
+        if context.location is TranslationContextLocation.choice_name:
+            extras = string.extras
+            if "key" in extras:
+                try:
+                    command_name, option_name, idx = extras["key"].split(":")
+                except ValueError:
+                    raise ValueError(
+                        "Choice name requires you to pass the key in extras. Like `locale_str('key', key='command name:option name:index')`"
+                    )
+            
+                string.extras["index"] = int(idx)
+                string.extras["option"] = option_name
+
         command_name = string.extras.get("command") or command_name
 
         if not command_name:
