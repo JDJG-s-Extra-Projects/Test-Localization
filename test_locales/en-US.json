@@ -3,8 +3,8 @@
         "name": "convert_temperature",
         "description": "A command to convert temperatures to different scales",
         "options": {
-            "temp_system": {
-                "name": "temp_system",
+            "temperature_unit": {
+                "name": "temperature_unit",
                 "description": "Select a Unit of Temperature from the dropdown."
             },
             "temperature": {
@@ -34,7 +34,7 @@
                     }
                 ],
                 "footer": {
-                    "text": "Chose: {temp_system_value}"
+                    "text": "Chose: {temperature_unit_value}"
                 }
             }
         ],

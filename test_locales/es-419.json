@@ -3,7 +3,7 @@
         "name": "convertir_temperatura",
         "description": "un comando para convertir temperaturas en diferentes escalas",
         "options": {
-            "temp_system": {
+            "temperature_unit": {
                 "name": null,
                 "description": null
             },
@@ -34,7 +34,7 @@
                     }
                 ],
                 "footer": {
-                    "text": "Eligió {temp_system_value}"
+                    "text": "Eligió {temperature_unit_value}"
                 }
             }
         ],

@@ -36,8 +36,8 @@
         "r_symbol": {
             "text": "°R"
         },
-        "temp_system": {
-            "name": "temp_system",
+        "temperature_unit": {
+            "name": "temperature_unit",
             "description": "Select a Unit of Temperature from the dropdown."
         },
         "temperature": {
@@ -83,7 +83,7 @@
         "r_symbol": {
             "text": "°R"
         },
-        "temp_system": {
+        "temperature_unit": {
             "name": null,
             "description": null
         },
@@ -130,7 +130,7 @@
         "r_symbol": {
             "text": "°R"
         },
-        "temp_system": {
+        "temperature_unit": {
             "name": null,
             "description": null
         },
@@ -177,7 +177,7 @@
         "r_symbol": {
             "text": "°R"
         },
-        "temp_system": {
+        "temperature_unit": {
             "name": "変換元単位",
             "description": "変換する元の単位を選択"
         },
@@ -224,7 +224,7 @@
         "r_symbol": {
             "text": "°R"
         },
-        "temp_system": {
+        "temperature_unit": {
             "name": null,
             "description": null
         },
@@ -271,7 +271,7 @@
         "r_symbol": {
             "text": "°R"
         },
-        "temp_system": {
+        "temperature_unit": {
             "name": null,
             "description": null
         },
@@ -318,7 +318,7 @@
         "r_symbol": {
             "text": "°R"
         },
-        "temp_system": {
+        "temperature_unit": {
             "name": null,
             "description": null
         },
@@ -365,7 +365,7 @@
         "r_symbol": {
             "text": "°R"
         },
-        "temp_system": {
+        "temperature_unit": {
             "name": null,
             "description": null
         },
@@ -412,7 +412,7 @@
         "r_symbol": {
             "text": "°R"
         },
-        "temp_system": {
+        "temperature_unit": {
             "name": null,
             "description": null
         },
@@ -459,7 +459,7 @@
         "r_symbol": {
             "text": "°R"
         },
-        "temp_system": {
+        "temperature_unit": {
             "name": null,
             "description": null
         },
@@ -506,7 +506,7 @@
         "r_symbol": {
             "text": "°R"
         },
-        "temp_system": {
+        "temperature_unit": {
             "name": null,
             "description": null
         },
@@ -553,7 +553,7 @@
         "r_symbol": {
             "text": "°R"
         },
-        "temp_system": {
+        "temperature_unit": {
             "name": null,
             "description": null
         },
@@ -600,7 +600,7 @@
         "r_symbol": {
             "text": "°R"
         },
-        "temp_system": {
+        "temperature_unit": {
             "name": null,
             "description": null
         },
@@ -647,7 +647,7 @@
         "r_symbol": {
             "text": "°R"
         },
-        "temp_system": {
+        "temperature_unit": {
             "name": null,
             "description": null
         },
@@ -694,7 +694,7 @@
         "r_symbol": {
             "text": "°R"
         },
-        "temp_system": {
+        "temperature_unit": {
             "name": null,
             "description": null
         },
@@ -741,8 +741,8 @@
         "r_symbol": {
             "text": "°R"
         },
-        "temp_system": {
-            "name": "temp_system",
+        "temperature_unit": {
+            "name": "temperature_unit",
             "description": "Select a Unit of Temperature from the dropdown."
         },
         "temperature": {

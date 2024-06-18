@@ -3,7 +3,7 @@
         "name": "convert_temperature",
         "description": "Ett kommando för att konvertera temperaturer till olika skalor",
         "options": {
-            "temp_system": {
+            "temperature_unit": {
                 "name": null,
                 "description": null
             },
@@ -34,7 +34,7 @@
                     }
                 ],
                 "footer": {
-                    "text": "Valde: {temp_system_value}"
+                    "text": "Valde: {temperature_unit_value}"
                 }
             }
         ],

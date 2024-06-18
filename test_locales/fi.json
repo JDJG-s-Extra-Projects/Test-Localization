@@ -3,7 +3,7 @@
         "name": "convert_temperature",
         "description": "Komento lämpötilojen muuntamista varten",
         "options": {
-            "temp_system": {
+            "temperature_unit": {
                 "name": null,
                 "description": null
             },
@@ -34,7 +34,7 @@
                     }
                 ],
                 "footer": {
-                    "text": "Valinta: {temp_system_value}"
+                    "text": "Valinta: {temperature_unit_value}"
                 }
             }
         ],

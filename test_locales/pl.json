@@ -1,15 +1,15 @@
 {
     "convert_temperature": {
         "name": "temperatury_konwersja",
-        "description": "Polecenie przeliczania temperatur na różne skale",
+        "description": "Polecenie przeliczania temperatur na różne jednostki.",
         "options": {
-            "temp_system": {
-                "name": null,
-                "description": null
+            "temperature_unit": {
+                "name": "jednostka_temperatury",
+                "description": "Wybierz jednostkę temperatury z listy."
             },
             "temperature": {
-                "name": null,
-                "description": null
+                "name": "temperatura",
+                "description": "Wpisz numer temperatury."
             }
         },
         "embeds": [
@@ -34,7 +34,7 @@
                     }
                 ],
                 "footer": {
-                    "text": "Wybrane: {temp_system_value}"
+                    "text": "Wybrane: {temperature_unit_value}"
                 }
             }
         ],

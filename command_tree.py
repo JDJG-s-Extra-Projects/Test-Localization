@@ -62,6 +62,7 @@ class JDCommandTranslator(app_commands.Translator):
     LOCALS_PATH = "./test_locales"
     # dynamically loaded in load
     LOCALE_TO_FILE: dict[discord.Locale, str] = {}
+    EXCLUDE_LOCALES: list[discord.Locale] = []
 
     def __init__(self, *args: Any, **kwargs: Any) -> None:
         super().__init__(*args, **kwargs)
@@ -70,7 +71,6 @@ class JDCommandTranslator(app_commands.Translator):
         self.cached_locales: dict[discord.Locale, dict[str, LocaleCommand]] = {}
 
     async def load(self) -> None:
-
         locale_directory = pathlib.Path(self.LOCALS_PATH)
         files = list(locale_directory.rglob("*.json"))
 
@@ -80,6 +80,9 @@ class JDCommandTranslator(app_commands.Translator):
             except ValueError:
                 raise ValueError(f"Invalid locale file {file.name}. Expected a file like `en-US.json`.")
                 # I should tell soheab to tell the user that it will use the english us locale as a default because that way it still functions.
+            
+            if locale in self.EXCLUDE_LOCALES:
+                continue
 
             self.LOCALE_TO_FILE[locale] = file.name
             await self.get_locale(locale)
@@ -104,7 +107,7 @@ class JDCommandTranslator(app_commands.Translator):
             return self.cached_locales[locale]
 
         file = self.LOCALE_TO_FILE[locale]
-        with open(f"{self.LOCALS_PATH}/{file}") as f:
+        with open(f"{self.LOCALS_PATH}/{file}", encoding="UTF-8") as f:
             data = json.loads(f.read())
             self._ensure_translator_id(locale, data)
             self.cached_locales[locale] = data
@@ -175,7 +178,7 @@ class JDCommandTranslator(app_commands.Translator):
     async def translate(
         self, string: app_commands.locale_str, locale: discord.Locale, context: TranslationContextTypes
     ) -> str | None:
-        if locale not in self.LOCALE_TO_FILE:
+        if locale not in self.LOCALE_TO_FILE or locale in self.EXCLUDE_LOCALES:
             return None
 
         command_name: str | None = None
@@ -224,11 +227,8 @@ class JDCommandTranslator(app_commands.Translator):
         command = await self.get_command(locale, command_name)
         if not command:
             return None
-
-        if context.location in (
-            TranslationContextLocation.command_name,
-            TranslationContextLocation.parameter_name,
-        ):
+        
+        if context.location is TranslationContextLocation.command_name:
             return command.get("name")
 
         elif context.location in (
@@ -241,14 +241,8 @@ class JDCommandTranslator(app_commands.Translator):
             TranslationContextLocation.parameter_name,
             TranslationContextLocation.parameter_description,
         ):
-            parameter = command.get("options", {}).get(string.message)
-            if not parameter:
-                return None
-
-            if context.location is TranslationContextLocation.parameter_name:
-                return parameter.get("name")
-
-            return parameter.get("description")
+            _, key = context.location.name.split("_")
+            return command.get("options", {}).get(context.data.name, {}).get(key)
 
         elif context.location is TranslationContextLocation.choice_name:
             idx = string.extras.get("index")
@@ -331,3 +325,6 @@ class JDCommandTranslator(app_commands.Translator):
 
             elif key == "content":
                 return command.get("content")
+            
+        else:
+            return None

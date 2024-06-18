@@ -19,28 +19,37 @@ class Extra(commands.Cog):
     def __init__(self, bot: JDBot):
         self.bot: JDBot = bot
 
+    @app_commands.command(
+        description="A command to convert temperatures to different scales",
+        auto_locale_strings=True,
+    )
     @app_commands.user_install()
     @app_commands.guild_install()
     @app_commands.allowed_contexts(guilds=True, dms=True, private_channels=True)
-    @app_commands.describe(temp_system="Select a Unit Temperature from the dropdown.")
-    @app_commands.describe(temperature="Please enter a number")
-    @app_commands.command(
-        description="A command to convert temperatures to different scales"
+    @app_commands.describe(
+        temperature_unit="Select a Unit Temperature from the dropdown.",
+        temperature="Please enter a number",
     )
     @app_commands.choices(
-        temp_system=locale_choices(
-            {"Celsius": "celsius", "Fahrenheit": "fahrenheit", "Kelvin": "kelvin", "Rankine": "rankine"},
+        temperature_unit=locale_choices(
+            {
+                "Celsius": "celsius",
+                "Fahrenheit": "fahrenheit",
+                "Kelvin": "kelvin",
+                "Rankine": "rankine",
+            },
             command_name="convert_temperature",
-            option_name="temp_system",
+            option_name="temperature_unit",
         )
     )
+
     async def convert_temperature(
         self,
         interaction: discord.Interaction[JDBot],
-        temp_system: app_commands.Choice[str],
+        temperature_unit: app_commands.Choice[str],
         temperature: float,
     ):
-        temps = Temperature[temp_system.value].convert_to(temperature)
+        temps = Temperature[temperature_unit.value].convert_to(temperature)
 
         if temps.celsius < 20:
             color = 0x0000FF
@@ -54,14 +63,14 @@ class Extra(commands.Cog):
         temp_fahrenheit = f"{temps.fahrenheit:,}"
         temp_kelvin = f"{temps.kelvin:,}"
         temp_rankine = f"{temps.rankine:,}"
-        temp_system_value = str(temp_system.value)
+        temperature_unit_value = str(temperature_unit.value)
 
         embed = discord.Embed(title="Temperature:", color=color)
         embed.add_field(name="Celsius:", value="{temp_celsius} °C")
         embed.add_field(name="Fahrenheit:", value="{temp_fahrenheit} °F")
         embed.add_field(name="Kelvin:", value="{temp_kelvin} K")
         embed.add_field(name="Rankine:", value="{temp_rankine} °R")
-        embed.set_footer(text="Chose: {temp_system_value}")
+        embed.set_footer(text="Chose: {temperature_unit_value}")
 
         embeds = await self.bot.tree.translator.translate_embeds(
             interaction,
@@ -70,7 +79,7 @@ class Extra(commands.Cog):
             temp_fahrenheit=temp_fahrenheit,
             temp_kelvin=temp_kelvin,
             temp_rankine=temp_rankine,
-            temp_system_value=temp_system_value,
+            temperature_unit_value=temperature_unit_value,
         )
         await interaction.response.send_message(embeds=embeds)
 

@@ -3,7 +3,7 @@
         "name": "convert_temperature",
         "description": "一个可以转换温度至不同温标的指令",
         "options": {
-            "temp_system": {
+            "temperature_unit": {
                 "name": null,
                 "description": null
             },
@@ -34,7 +34,7 @@
                     }
                 ],
                 "footer": {
-                    "text": "请选择： {temp_system_value}"
+                    "text": "请选择： {temperature_unit_value}"
                 }
             }
         ],

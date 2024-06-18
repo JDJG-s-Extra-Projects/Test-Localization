@@ -3,7 +3,7 @@
         "name": "温度_変換",
         "description": "温度を変換します:",
         "options": {
-            "temp_system": {
+            "temperature_unit": {
                 "name": "変換元単位",
                 "description": "変換する元の単位を選択"
             },
@@ -34,7 +34,7 @@
                     }
                 ],
                 "footer": {
-                    "text": "選択: {temp_system_value}"
+                    "text": "選択: {temperature_unit_value}"
                 }
             }
         ],

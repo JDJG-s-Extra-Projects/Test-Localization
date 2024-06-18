@@ -3,8 +3,8 @@
         "name": "temperatuur_omrekenen",
         "description": "Een command om temperaturen naar andere schalen om te rekenen",
         "options": {
-            "temp_system": {
-                "name": "temperatuur_systeem",
+            "temperature_unit": {
+                "name": "temperatuur_schaal",
                 "description": "De schaal van de temperatuur die je wilt omrekenen"
             },
             "temperature": {
@@ -34,7 +34,7 @@
                     }
                 ],
                 "footer": {
-                    "text": "Gekozen: {temp_system_value}"
+                    "text": "Gekozen: {temperature_unit_value}"
                 }
             }
         ],

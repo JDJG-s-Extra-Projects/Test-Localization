@@ -3,13 +3,13 @@
         "name": "temperatur_konvertieren",
         "description": "Ein Befehl zum Konvertieren von Temperaturen in verschiedene Maßstäbe",
         "options": {
-            "temp_system": {
-                "name": null,
-                "description": null
+            "temperature_unit": {
+                "name": "temperatureinheit",
+                "description": "Wähle eine Temperatureinheit aus der Liste."
             },
             "temperature": {
-                "name": null,
-                "description": null
+                "name": "temperatur",
+                "description": "Bitte eine Zahl eingeben."
             }
         },
         "embeds": [
@@ -34,7 +34,7 @@
                     }
                 ],
                 "footer": {
-                    "text": "Gewählt: {temp_system_value}"
+                    "text": "Gewählt: {temperature_unit_value}"
                 }
             }
         ],

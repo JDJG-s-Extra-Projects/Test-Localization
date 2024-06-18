@@ -3,7 +3,7 @@
         "name": "sıcaklık_dönüştür",
         "description": "Sıcaklık birimler arasında dönüşüm yapabilen bir komut",
         "options": {
-            "temp_system": {
+            "temperature_unit": {
                 "name": null,
                 "description": null
             },
@@ -34,7 +34,7 @@
                     }
                 ],
                 "footer": {
-                    "text": "Seçilen birim: {temp_system_value}"
+                    "text": "Seçilen birim: {temperature_unit_value}"
                 }
             }
         ],

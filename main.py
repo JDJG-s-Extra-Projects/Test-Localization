@@ -20,13 +20,13 @@ class JDBot(commands.Bot):
         super().__init__(*args, **kwargs)
 
     async def setup_hook(self) -> None:
-        await self.tree.set_translator(JDCommandTranslator())
-
         for cog in EXTENSIONS:
             try:
                 await self.load_extension(f"{cog}")
             except commands.errors.ExtensionError:
                 traceback.print_exc()
+
+        await self.tree.set_translator(JDCommandTranslator())
 
     async def try_user(self, id: int, /) -> Optional[discord.User]:
         maybe_user = self.get_user(id)
@@ -40,10 +40,10 @@ class JDBot(commands.Bot):
             return None
 
 
-intents = discord.Intents.all()
+intents = discord.Intents(guilds=True, messages=True, message_content=True)
 
 bot = JDBot(
-    command_prefix="h$",
+    command_prefix="tf?",
     intents=intents,
     chunk_guilds_at_startup=False,
     strip_after_prefix=True,

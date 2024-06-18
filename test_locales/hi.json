@@ -3,7 +3,7 @@
         "name": "तापमान_परिवर्तन",
         "description": "तापमान को विभिन्न पैमानों में परिवर्तित करने हेतु एक कमांड।",
         "options": {
-            "temp_system": {
+            "temperature_unit": {
                 "name": null,
                 "description": null
             },
@@ -34,7 +34,7 @@
                     }
                 ],
                 "footer": {
-                    "text": "अपनी पसंद चुनें: {temp_system_value}"
+                    "text": "अपनी पसंद चुनें: {temperature_unit_value}"
                 }
             }
         ],
