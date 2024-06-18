@@ -1,15 +1,15 @@
 {
     "convert_temperature": {
-        "name": "convert_temperature",
+        "name": "温度_変換",
         "description": "温度を変換します:",
         "options": {
             "temp_system": {
-                "name": null,
-                "description": null
+                "name": "変換元単位",
+                "description": "変換する元の単位を選択"
             },
             "temperature": {
-                "name": null,
-                "description": null
+                "name": "温度",
+                "description": "変換元単位の温度を入力"
             }
         },
         "embeds": [
@@ -37,7 +37,6 @@
                     "text": "選択: {temp_system_value}"
                 }
             }
-        ],
-        "translator_id": "1163416356566347828"
+        ]
     }
 }
