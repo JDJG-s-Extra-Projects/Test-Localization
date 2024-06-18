@@ -4,12 +4,12 @@
         "description": "A command to convert temperatures to different scales",
         "options": {
             "temp_system": {
-                "name": null,
-                "description": null
+                "name": "temp_system",
+                "description": "Select a Unit Temperature from the dropdown."
             },
             "temperature": {
-                "name": null,
-                "description": null
+                "name": "temperature",
+                "description": "Please enter a number"
             }
         },
         "embeds": [
