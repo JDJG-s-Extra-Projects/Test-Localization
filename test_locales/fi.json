@@ -34,7 +34,7 @@
                     }
                 ],
                 "footer": {
-                    "text": "Valinta: {temperature_unit_value}"
+                    "text": "Valinta: {temp_system_value}"
                 }
             }
         ],

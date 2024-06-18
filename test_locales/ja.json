@@ -34,7 +34,7 @@
                     }
                 ],
                 "footer": {
-                    "text": "選択: {temperature_unit_value}"
+                    "text": "選択: {temp_system_value}"
                 }
             }
         ],

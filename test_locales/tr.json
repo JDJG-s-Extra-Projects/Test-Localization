@@ -34,7 +34,7 @@
                     }
                 ],
                 "footer": {
-                    "text": "Seçilen birim: {temperature_unit_value}"
+                    "text": "Seçilen birim: {temp_system_value}"
                 }
             }
         ],
