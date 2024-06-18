@@ -13,9 +13,9 @@ import discord
 from discord import app_commands
 from discord.app_commands import TranslationContextLocation, TranslationContextTypes, locale_str
 
-
 if TYPE_CHECKING:
     from .main import JDBot
+
 
 class LocaleCommandEmbedAuthor(TypedDict):
     name: str | None
@@ -80,7 +80,7 @@ class JDCommandTranslator(app_commands.Translator):
             except ValueError:
                 raise ValueError(f"Invalid locale file {file.name}. Expected a file like `en-US.json`.")
                 # I should tell soheab to tell the user that it will use the english us locale as a default because that way it still functions.
-            
+
             if locale in self.EXCLUDE_LOCALES:
                 continue
 
@@ -94,10 +94,12 @@ class JDCommandTranslator(app_commands.Translator):
     def _ensure_translator_id(self, locale: discord.Locale, data: dict[str, LocaleCommand]) -> None:
         for command in data.values():
             if "translator_id" not in command:
-                raise ValueError((
-                    f'Missing translator_id for command "{command["name"]}"'
-                    f" in locale file {self.LOCALE_TO_FILE[locale]}. Please add it."
-                ))
+                raise ValueError(
+                    (
+                        f'Missing translator_id for command "{command["name"]}"'
+                        f" in locale file {self.LOCALE_TO_FILE[locale]}. Please add it."
+                    )
+                )
 
     async def get_locale(
         self,
@@ -117,12 +119,12 @@ class JDCommandTranslator(app_commands.Translator):
     async def get_command(self, locale: discord.Locale, command_name: str) -> LocaleCommand | None:
         locales = await self.get_locale(locale)
         return locales.get(command_name)
-    
+
     async def _get_translator(self, interaction: discord.Interaction[JDBot]) -> discord.User | None:
         command = await self.get_command(interaction.locale, interaction.command.qualified_name)  # type: ignore
         if not command:
             raise ValueError(f"Command {interaction.command.qualified_name} not found in locale {interaction.locale}.")  # type: ignore
-        
+
         translator_id = command.get("translator_id")
         return await interaction.client.try_user(int(translator_id))
 
@@ -144,8 +146,7 @@ class JDCommandTranslator(app_commands.Translator):
             embed.description = await do_translate(embed.description, f"embed:{idx}:description")
 
             embed.set_footer(
-                text=await do_translate(embed.footer.text, f"embed:{idx}:footer"),
-                icon_url=embed.footer.icon_url
+                text=await do_translate(embed.footer.text, f"embed:{idx}:footer"), icon_url=embed.footer.icon_url
             )
 
             author_name = await do_translate(embed.author.name, f"embed:{idx}:author")
@@ -201,7 +202,7 @@ class JDCommandTranslator(app_commands.Translator):
                     raise ValueError(
                         "Choice name requires you to pass the key in extras. Like `locale_str('key', key='command name:option name:index')`"
                     )
-            
+
                 string.extras["index"] = int(idx)
                 string.extras["option"] = option_name
 
@@ -227,7 +228,7 @@ class JDCommandTranslator(app_commands.Translator):
         command = await self.get_command(locale, command_name)
         if not command:
             return None
-        
+
         if context.location is TranslationContextLocation.command_name:
             return command.get("name")
 
@@ -325,6 +326,6 @@ class JDCommandTranslator(app_commands.Translator):
 
             elif key == "content":
                 return command.get("content")
-            
+
         else:
             return None

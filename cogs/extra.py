@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-import typing
 import traceback
+import typing
 
 import discord
 from discord import app_commands
@@ -42,7 +42,6 @@ class Extra(commands.Cog):
             option_name="temperature_unit",
         )
     )
-
     async def convert_temperature(
         self,
         interaction: discord.Interaction[JDBot],
@@ -88,9 +87,7 @@ class Extra(commands.Cog):
 
     @convert_temperature.error
     async def convert_temperature_error(self, interaction: discord.Interaction, error):
-        await interaction.response.send_message(
-            f"{error}! Please Send to this to my developer", ephemeral=True
-        )
+        await interaction.response.send_message(f"{error}! Please Send to this to my developer", ephemeral=True)
         print(interaction.command)
         traceback.print_exc()
 
