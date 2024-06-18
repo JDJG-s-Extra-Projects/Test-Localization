@@ -50,7 +50,6 @@ class Extra(commands.Cog):
         embed.add_field(name="Kelvin:", value="{temp_kelvin} K")
         embed.add_field(name="Rankine:", value="{temp_rankine} °R")
         embed.set_footer(text="Chose: {temp_system_value}")
-        embed.set_author(name=f"{interaction.user}")
 
         embeds = await self.bot.tree.translator.translate_embeds(
             interaction,
