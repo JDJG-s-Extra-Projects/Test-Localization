@@ -1,7 +1,7 @@
 {
     "convert_temperature": {
-        "name": "converter_temperatura",
-        "description": "Um comando para converter temperaturas para diferentes escalas",
+        "name": "convert_temperature",
+        "description": "A command to convert temperatures to different scales",
         "options": {
             "temp_system": {
                 "name": null,
@@ -14,7 +14,7 @@
         },
         "embeds": [
             {
-                "title": "converter_temperatura",
+                "title": "convert_temperature",
                 "fields": [
                     {
                         "name": "Celsius:",
@@ -34,10 +34,10 @@
                     }
                 ],
                 "footer": {
-                    "text": "Selecionado: {temp_system_value}"
+                    "text": "Choose: {temp_system_value}"
                 }
             }
         ],
-        "translator_id": "1096865109541929161"
+        "translator_id": "566653183774949395"
     }
 }
