@@ -63,6 +63,7 @@ class Extra(commands.Cog):
         await interaction.response.send_message(embeds=embeds)
 
         print(interaction.locale)
+        # debug print.
 
     @convert_temperature.error
     async def convert_temperature_error(self, interaction: discord.Interaction, error):
