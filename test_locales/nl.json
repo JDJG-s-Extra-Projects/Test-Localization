@@ -4,8 +4,8 @@
         "description": "Een command om temperaturen naar andere schalen om te rekenen",
         "options": {
             "temperature_unit": {
-                "name": "temperatuur_schaal",
-                "description": "De schaal van de temperatuur die je wilt omrekenen"
+                "name": "temperatuureenheid",
+                "description": "De eenheid van de temperatuur die je wilt omrekenen"
             },
             "temperature": {
                 "name": "temperatuur",
