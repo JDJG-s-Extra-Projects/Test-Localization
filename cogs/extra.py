@@ -6,7 +6,7 @@ import traceback
 import discord
 from discord import app_commands
 from discord.ext import commands
-from discord.app_commands import Choice
+from discord.app_commands import Choice, locale_str
 
 from local_utils import Temperature
 
