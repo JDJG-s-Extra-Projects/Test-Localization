@@ -48,8 +48,11 @@ class Temperature(enum.Enum):
 
 
 def locale_choices(
-    choices: dict[str, str], /, command_name: str, option_name: str
+    choices: dict[str, str] | list[str], /, command_name: str, option_name: str
 ) -> list[app_commands.Choice]:
+    if isinstance(choices, list):
+        choices = {choice: choice for choice in choices}
+
     return [
         app_commands.Choice(
             name=locale_str(name, key=f"{command_name}:{option_name}:{i}"),
