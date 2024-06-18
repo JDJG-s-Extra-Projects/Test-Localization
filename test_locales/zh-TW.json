@@ -1,15 +1,15 @@
 {
     "convert_temperature": {
-        "name": "convert_temperature",
+        "name": "轉換溫度",
         "description": "一個可以轉換溫度至不同溫標的指令",
         "options": {
             "temperature_unit": {
-                "name": null,
-                "description": null
+                "name": "溫標單位",
+                "description": "請選擇以下一種溫標單位"
             },
             "temperature": {
-                "name": null,
-                "description": null
+                "name": "溫度",
+                "description": "請輸入數字"
             }
         },
         "embeds": [

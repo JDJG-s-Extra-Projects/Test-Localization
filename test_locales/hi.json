@@ -4,12 +4,12 @@
         "description": "तापमान को विभिन्न पैमानों में परिवर्तित करने हेतु एक कमांड।",
         "options": {
             "temperature_unit": {
-                "name": null,
-                "description": null
+                "name": "तापमान_इकाई",
+                "description": "ड्रॉपडाउन से तापमान की एक इकाई का चयन करें।"
             },
             "temperature": {
-                "name": null,
-                "description": null
+                "name": "तापमान",
+                "description": "एक संख्या दर्ज करें।"
             }
         },
         "embeds": [
