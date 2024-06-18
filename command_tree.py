@@ -78,8 +78,8 @@ class JDCommandTranslator(app_commands.Translator):
                 raise ValueError(f"Invalid locale file {file}. Expected a file like `en-US.json`.")
                 # I should tell soheab to tell the user that it will use the english us locale as a default because that way it still functions.
 
-                self.LOCALE_TO_FILE[locale] = file
-                await self.get_locale(locale)
+            self.LOCALE_TO_FILE[locale] = file
+            await self.get_locale(locale)
 
     async def unload(self) -> None:
         self.cached_locales.clear()
