@@ -9,7 +9,7 @@
     "desc" : {"text": "Chose:"},
     "c_symbol" : {"text": "°C"},
     "f_symbol" : {"text": "°F"},
-    "k_symbol" : {"text": "°K"},
+    "k_symbol" : {"text": "K"},
     "r_symbol" : {"text": "°R"},
     "translator_id" : "168422909482762240"
 }

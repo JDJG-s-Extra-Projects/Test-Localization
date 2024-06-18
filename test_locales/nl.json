@@ -18,7 +18,7 @@
                 "fields": [
                     {"name": "Celsius:", "value": "{temp_celsius} °C"},
                     {"name": "Fahrenheit:", "value": "{temp_fahrenheit} °F"},
-                    {"name": "Kelvin:", "value": "{temp_kelvin} °K"},
+                    {"name": "Kelvin:", "value": "{temp_kelvin} K"},
                     {"name": "Rakine:", "value": "{temp_rankine} °R"}
                 ],
                 "footer": {

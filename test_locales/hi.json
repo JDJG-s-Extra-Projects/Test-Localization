@@ -18,7 +18,7 @@
                 "fields": [
                     {"name": "सेल्सियस:", "value": "{temp_celsius} °C"},
                     {"name": "फ़ारेनहाइ:", "value": "{temp_fahrenheit} °F"},
-                    {"name": "केल्विन:", "value": "{temp_kelvin} °K"},
+                    {"name": "केल्विन:", "value": "{temp_kelvin} K"},
                     {"name": "रैंकिन:", "value": "{temp_rankine} °R"}
                 ],
                 "footer": {
