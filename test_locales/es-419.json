@@ -1,38 +1,40 @@
 {
-    "name": "convertir_temperatura",
-    "description": "un comando para convertir temperaturas en diferentes escalas",
-    "options": {
-        "temp_system": {
-            "name": null,
-            "description": null
-        },
-        "temperature": {
-            "name": null,
-            "description": null
-        }
-    },
-    "embeds": {
-        "title": "convertir_temperatura",
-        "fields": [
-            {
-                "name": "Celcius:",
-                "value": "{temp_celsius} °C"
+    "convert_temperature": {
+        "name": "convertir_temperatura",
+        "description": "un comando para convertir temperaturas en diferentes escalas",
+        "options": {
+            "temp_system": {
+                "name": null,
+                "description": null
             },
-            {
-                "name": "Fahrenheit:",
-                "value": "{temp_fahrenheit} °F"
-            },
-            {
-                "name": "Kelvin:",
-                "value": "{temp_kelvin} K"
-            },
-            {
-                "name": "Rankine:",
-                "value": "{temp_rankine} °R"
+            "temperature": {
+                "name": null,
+                "description": null
             }
-        ],
-        "footer": {
-            "text": "Eligió {temp_system_value}"
+        },
+        "embeds": {
+            "title": "convertir_temperatura",
+            "fields": [
+                {
+                    "name": "Celcius:",
+                    "value": "{temp_celsius} °C"
+                },
+                {
+                    "name": "Fahrenheit:",
+                    "value": "{temp_fahrenheit} °F"
+                },
+                {
+                    "name": "Kelvin:",
+                    "value": "{temp_kelvin} K"
+                },
+                {
+                    "name": "Rankine:",
+                    "value": "{temp_rankine} °R"
+                }
+            ],
+            "footer": {
+                "text": "Eligió {temp_system_value}"
+            }
         }
     }
 }

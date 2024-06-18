@@ -1,38 +1,40 @@
 {
-    "name": "convert_temperature",
-    "description": "温度を変換します:",
-    "options": {
-        "temp_system": {
-            "name": null,
-            "description": null
-        },
-        "temperature": {
-            "name": null,
-            "description": null
-        }
-    },
-    "embeds": {
-        "title": "convert_temperature",
-        "fields": [
-            {
-                "name": "摂氏:",
-                "value": "{temp_celsius} °C"
+    "convert_temperature": {
+        "name": "convert_temperature",
+        "description": "温度を変換します:",
+        "options": {
+            "temp_system": {
+                "name": null,
+                "description": null
             },
-            {
-                "name": "華氏:",
-                "value": "{temp_fahrenheit} °F"
-            },
-            {
-                "name": "ケルビン:",
-                "value": "{temp_kelvin} K"
-            },
-            {
-                "name": "ランキン度:",
-                "value": "{temp_rankine} °R"
+            "temperature": {
+                "name": null,
+                "description": null
             }
-        ],
-        "footer": {
-            "text": "選択: {temp_system_value}"
+        },
+        "embeds": {
+            "title": "convert_temperature",
+            "fields": [
+                {
+                    "name": "摂氏:",
+                    "value": "{temp_celsius} °C"
+                },
+                {
+                    "name": "華氏:",
+                    "value": "{temp_fahrenheit} °F"
+                },
+                {
+                    "name": "ケルビン:",
+                    "value": "{temp_kelvin} K"
+                },
+                {
+                    "name": "ランキン度:",
+                    "value": "{temp_rankine} °R"
+                }
+            ],
+            "footer": {
+                "text": "選択: {temp_system_value}"
+            }
         }
     }
 }

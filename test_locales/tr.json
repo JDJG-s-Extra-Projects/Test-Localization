@@ -1,38 +1,40 @@
 {
-    "name": "sıcaklık_dönüştür",
-    "description": "Sıcaklık birimler arasında dönüşüm yapabilen bir komut",
-    "options": {
-        "temp_system": {
-            "name": null,
-            "description": null
-        },
-        "temperature": {
-            "name": null,
-            "description": null
-        }
-    },
-    "embeds": {
-        "title": "sıcaklık_dönüştür",
-        "fields": [
-            {
-                "name": "Santigrat:",
-                "value": "{temp_celsius} °C"
+    "convert_temperature": {
+        "name": "sıcaklık_dönüştür",
+        "description": "Sıcaklık birimler arasında dönüşüm yapabilen bir komut",
+        "options": {
+            "temp_system": {
+                "name": null,
+                "description": null
             },
-            {
-                "name": "Fahrenhayt:",
-                "value": "{temp_fahrenheit} °F"
-            },
-            {
-                "name": "Kelvin:",
-                "value": "{temp_kelvin} K"
-            },
-            {
-                "name": "Rankine:",
-                "value": "{temp_rankine} °R"
+            "temperature": {
+                "name": null,
+                "description": null
             }
-        ],
-        "footer": {
-            "text": "Seçilen birim: {temp_system_value}"
+        },
+        "embeds": {
+            "title": "sıcaklık_dönüştür",
+            "fields": [
+                {
+                    "name": "Santigrat:",
+                    "value": "{temp_celsius} °C"
+                },
+                {
+                    "name": "Fahrenhayt:",
+                    "value": "{temp_fahrenheit} °F"
+                },
+                {
+                    "name": "Kelvin:",
+                    "value": "{temp_kelvin} K"
+                },
+                {
+                    "name": "Rankine:",
+                    "value": "{temp_rankine} °R"
+                }
+            ],
+            "footer": {
+                "text": "Seçilen birim: {temp_system_value}"
+            }
         }
     }
 }

@@ -1,38 +1,40 @@
 {
-    "name": "तापमान_परिवर्तन",
-    "description": "तापमान को विभिन्न पैमानों में परिवर्तित करने हेतु एक कमांड।",
-    "options": {
-        "temp_system": {
-            "name": null,
-            "description": null
-        },
-        "temperature": {
-            "name": null,
-            "description": null
-        }
-    },
-    "embeds": {
-        "title": "तापमान_परिवर्तन",
-        "fields": [
-            {
-                "name": "सेल्सियस:",
-                "value": "{temp_celsius} °C"
+    "convert_temperature": {
+        "name": "तापमान_परिवर्तन",
+        "description": "तापमान को विभिन्न पैमानों में परिवर्तित करने हेतु एक कमांड।",
+        "options": {
+            "temp_system": {
+                "name": null,
+                "description": null
             },
-            {
-                "name": "फ़ारेनहाइ:",
-                "value": "{temp_fahrenheit} °F"
-            },
-            {
-                "name": "केल्विन:",
-                "value": "{temp_kelvin} K"
-            },
-            {
-                "name": "रैंकिन:",
-                "value": "{temp_rankine} °R"
+            "temperature": {
+                "name": null,
+                "description": null
             }
-        ],
-        "footer": {
-            "text": "अपनी पसंद चुनें: {temp_system_value}"
+        },
+        "embeds": {
+            "title": "तापमान_परिवर्तन",
+            "fields": [
+                {
+                    "name": "सेल्सियस:",
+                    "value": "{temp_celsius} °C"
+                },
+                {
+                    "name": "फ़ारेनहाइ:",
+                    "value": "{temp_fahrenheit} °F"
+                },
+                {
+                    "name": "केल्विन:",
+                    "value": "{temp_kelvin} K"
+                },
+                {
+                    "name": "रैंकिन:",
+                    "value": "{temp_rankine} °R"
+                }
+            ],
+            "footer": {
+                "text": "अपनी पसंद चुनें: {temp_system_value}"
+            }
         }
     }
 }

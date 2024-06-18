@@ -1,38 +1,40 @@
 {
-    "name": "convert_temperature",
-    "description": "Ett kommando för att konvertera temperaturer till olika skalor",
-    "options": {
-        "temp_system": {
-            "name": null,
-            "description": null
-        },
-        "temperature": {
-            "name": null,
-            "description": null
-        }
-    },
-    "embeds": {
-        "title": "convert_temperature",
-        "fields": [
-            {
-                "name": "Celsius:",
-                "value": "{temp_celsius} °C"
+    "convert_temperature": {
+        "name": "convert_temperature",
+        "description": "Ett kommando för att konvertera temperaturer till olika skalor",
+        "options": {
+            "temp_system": {
+                "name": null,
+                "description": null
             },
-            {
-                "name": "Fahrenheit:",
-                "value": "{temp_fahrenheit} °F"
-            },
-            {
-                "name": "Kelvin:",
-                "value": "{temp_kelvin} K"
-            },
-            {
-                "name": "Rankine:",
-                "value": "{temp_rankine} °R"
+            "temperature": {
+                "name": null,
+                "description": null
             }
-        ],
-        "footer": {
-            "text": "Valde: {temp_system_value}"
+        },
+        "embeds": {
+            "title": "convert_temperature",
+            "fields": [
+                {
+                    "name": "Celsius:",
+                    "value": "{temp_celsius} °C"
+                },
+                {
+                    "name": "Fahrenheit:",
+                    "value": "{temp_fahrenheit} °F"
+                },
+                {
+                    "name": "Kelvin:",
+                    "value": "{temp_kelvin} K"
+                },
+                {
+                    "name": "Rankine:",
+                    "value": "{temp_rankine} °R"
+                }
+            ],
+            "footer": {
+                "text": "Valde: {temp_system_value}"
+            }
         }
     }
 }

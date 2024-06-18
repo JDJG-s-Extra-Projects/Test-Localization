@@ -1,38 +1,40 @@
 {
-    "name": "temperatury_konwersja",
-    "description": "Polecenie przeliczania temperatur na różne skale",
-    "options": {
-        "temp_system": {
-            "name": null,
-            "description": null
-        },
-        "temperature": {
-            "name": null,
-            "description": null
-        }
-    },
-    "embeds": {
-        "title": "temperatury_konwersja",
-        "fields": [
-            {
-                "name": "Celsjusz:",
-                "value": "{temp_celsius} °C"
+    "convert_temperature": {
+        "name": "temperatury_konwersja",
+        "description": "Polecenie przeliczania temperatur na różne skale",
+        "options": {
+            "temp_system": {
+                "name": null,
+                "description": null
             },
-            {
-                "name": "Fahrenheit:",
-                "value": "{temp_fahrenheit} °F"
-            },
-            {
-                "name": "Kelvin:",
-                "value": "{temp_kelvin} K"
-            },
-            {
-                "name": "Rankine:",
-                "value": "{temp_rankine} °R"
+            "temperature": {
+                "name": null,
+                "description": null
             }
-        ],
-        "footer": {
-            "text": "Wybrane: {temp_system_value}"
+        },
+        "embeds": {
+            "title": "temperatury_konwersja",
+            "fields": [
+                {
+                    "name": "Celsjusz:",
+                    "value": "{temp_celsius} °C"
+                },
+                {
+                    "name": "Fahrenheit:",
+                    "value": "{temp_fahrenheit} °F"
+                },
+                {
+                    "name": "Kelvin:",
+                    "value": "{temp_kelvin} K"
+                },
+                {
+                    "name": "Rankine:",
+                    "value": "{temp_rankine} °R"
+                }
+            ],
+            "footer": {
+                "text": "Wybrane: {temp_system_value}"
+            }
         }
     }
 }

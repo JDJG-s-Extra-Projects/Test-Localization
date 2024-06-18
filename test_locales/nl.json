@@ -1,38 +1,40 @@
 {
-    "name": "temperatuur_omrekenen",
-    "description": "Een command om temperaturen naar andere schalen om te rekenen",
-    "options": {
-        "temp_system": {
-            "name": null,
-            "description": null
-        },
-        "temperature": {
-            "name": null,
-            "description": null
-        }
-    },
-    "embeds": {
-        "title": "temperatuur_omrekenen",
-        "fields": [
-            {
-                "name": "Celsius:",
-                "value": "{temp_celsius} °C"
+    "convert_temperature": {
+        "name": "temperatuur_omrekenen",
+        "description": "Een command om temperaturen naar andere schalen om te rekenen",
+        "options": {
+            "temp_system": {
+                "name": null,
+                "description": null
             },
-            {
-                "name": "Fahrenheit:",
-                "value": "{temp_fahrenheit} °F"
-            },
-            {
-                "name": "Kelvin:",
-                "value": "{temp_kelvin} K"
-            },
-            {
-                "name": "Rankine:",
-                "value": "{temp_rankine} °R"
+            "temperature": {
+                "name": null,
+                "description": null
             }
-        ],
-        "footer": {
-            "text": "gekozen: {temp_system_value}"
+        },
+        "embeds": {
+            "title": "temperatuur_omrekenen",
+            "fields": [
+                {
+                    "name": "Celsius:",
+                    "value": "{temp_celsius} °C"
+                },
+                {
+                    "name": "Fahrenheit:",
+                    "value": "{temp_fahrenheit} °F"
+                },
+                {
+                    "name": "Kelvin:",
+                    "value": "{temp_kelvin} K"
+                },
+                {
+                    "name": "Rankine:",
+                    "value": "{temp_rankine} °R"
+                }
+            ],
+            "footer": {
+                "text": "gekozen: {temp_system_value}"
+            }
         }
     }
 }
