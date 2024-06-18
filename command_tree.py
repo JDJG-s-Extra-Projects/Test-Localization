@@ -107,6 +107,7 @@ class JDCommandTranslator(app_commands.Translator):
         with open(f"{self.LOCALS_PATH}/{file}") as f:
             data = json.loads(f.read())
             self._ensure_translator_id(locale, data)
+            self.cached_locales[locale] = data
 
         return data
 
