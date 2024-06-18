@@ -11,7 +11,7 @@ except ImportError:
 
 import discord
 from discord import app_commands
-from discord.app_commands import TranslationContextLocation, TranslationContextTypes, locale_str, translator
+from discord.app_commands import TranslationContextLocation, TranslationContextTypes, locale_str
 
 
 if TYPE_CHECKING:
