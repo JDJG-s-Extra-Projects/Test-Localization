@@ -12,29 +12,31 @@
                 "description": null
             }
         },
-        "embeds": {
-            "title": "convert_temperature",
-            "fields": [
-                {
-                    "name": "Celsius:",
-                    "value": "{temp_celsius} °C"
-                },
-                {
-                    "name": "Fahrenheit:",
-                    "value": "{temp_fahrenheit} °F"
-                },
-                {
-                    "name": "Kelvin:",
-                    "value": "{temp_kelvin} K"
-                },
-                {
-                    "name": "Rankine:",
-                    "value": "{temp_rankine} °R"
+        "embeds": [
+            {
+                "title": "convert_temperature",
+                "fields": [
+                    {
+                        "name": "Celsius:",
+                        "value": "{temp_celsius} °C"
+                    },
+                    {
+                        "name": "Fahrenheit:",
+                        "value": "{temp_fahrenheit} °F"
+                    },
+                    {
+                        "name": "Kelvin:",
+                        "value": "{temp_kelvin} K"
+                    },
+                    {
+                        "name": "Rankine:",
+                        "value": "{temp_rankine} °R"
+                    }
+                ],
+                "footer": {
+                    "text": "Valinta: {temp_system_value}"
                 }
-            ],
-            "footer": {
-                "text": "Valinta: {temp_system_value}"
             }
-        }
+        ]
     }
 }

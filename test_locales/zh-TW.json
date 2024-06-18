@@ -12,29 +12,31 @@
                 "description": null
             }
         },
-        "embeds": {
-            "title": "convert_temperature",
-            "fields": [
-                {
-                    "name": "攝氏度：",
-                    "value": "{temp_celsius} °C"
-                },
-                {
-                    "name": "華氏度",
-                    "value": "{temp_fahrenheit} °F"
-                },
-                {
-                    "name": "開爾文：",
-                    "value": "{temp_kelvin} K"
-                },
-                {
-                    "name": "蘭氏溫標：",
-                    "value": "{temp_rankine} °R"
+        "embeds": [
+            {
+                "title": "convert_temperature",
+                "fields": [
+                    {
+                        "name": "攝氏度：",
+                        "value": "{temp_celsius} °C"
+                    },
+                    {
+                        "name": "華氏度",
+                        "value": "{temp_fahrenheit} °F"
+                    },
+                    {
+                        "name": "開爾文：",
+                        "value": "{temp_kelvin} K"
+                    },
+                    {
+                        "name": "蘭氏溫標：",
+                        "value": "{temp_rankine} °R"
+                    }
+                ],
+                "footer": {
+                    "text": "請選擇： {temp_system_value}"
                 }
-            ],
-            "footer": {
-                "text": "請選擇： {temp_system_value}"
             }
-        }
+        ]
     }
 }

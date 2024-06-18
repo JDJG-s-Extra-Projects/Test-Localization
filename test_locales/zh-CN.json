@@ -12,29 +12,31 @@
                 "description": null
             }
         },
-        "embeds": {
-            "title": "convert_temperature",
-            "fields": [
-                {
-                    "name": "摄氏度：",
-                    "value": "{temp_celsius} °C"
-                },
-                {
-                    "name": "华氏度",
-                    "value": "{temp_fahrenheit} °F"
-                },
-                {
-                    "name": "开尔文：",
-                    "value": "{temp_kelvin} K"
-                },
-                {
-                    "name": "兰氏温标：",
-                    "value": "{temp_rankine} °R"
+        "embeds": [
+            {
+                "title": "convert_temperature",
+                "fields": [
+                    {
+                        "name": "摄氏度：",
+                        "value": "{temp_celsius} °C"
+                    },
+                    {
+                        "name": "华氏度",
+                        "value": "{temp_fahrenheit} °F"
+                    },
+                    {
+                        "name": "开尔文：",
+                        "value": "{temp_kelvin} K"
+                    },
+                    {
+                        "name": "兰氏温标：",
+                        "value": "{temp_rankine} °R"
+                    }
+                ],
+                "footer": {
+                    "text": "请选择： {temp_system_value}"
                 }
-            ],
-            "footer": {
-                "text": "请选择： {temp_system_value}"
             }
-        }
+        ]
     }
 }
