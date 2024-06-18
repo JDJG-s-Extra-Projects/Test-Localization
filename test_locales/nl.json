@@ -4,12 +4,12 @@
         "description": "Een command om temperaturen naar andere schalen om te rekenen",
         "options": {
             "temp_system": {
-                "name": null,
-                "description": null
+                "name": "temperatuur_systeem",
+                "description": "De schaal van de temperatuur die je wilt omrekenen"
             },
             "temperature": {
-                "name": null,
-                "description": null
+                "name": "temperatuur",
+                "description": "De temperatuur die je wilt omrekenen"
             }
         },
         "embeds": [
@@ -34,7 +34,7 @@
                     }
                 ],
                 "footer": {
-                    "text": "gekozen: {temp_system_value}"
+                    "text": "Gekozen: {temp_system_value}"
                 }
             }
         ],
