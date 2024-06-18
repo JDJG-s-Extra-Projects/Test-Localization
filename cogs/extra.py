@@ -6,9 +6,8 @@ import traceback
 import discord
 from discord import app_commands
 from discord.ext import commands
-from discord.app_commands import Choice, locale_str
 
-from local_utils import Temperature
+from local_utils import Temperature, locale_choices
 
 if typing.TYPE_CHECKING:
     from main import JDBot
@@ -25,29 +24,30 @@ class Extra(commands.Cog):
     @app_commands.allowed_contexts(guilds=True, dms=True, private_channels=True)
     @app_commands.describe(temp_system="Select a Unit Temperature from the dropdown.")
     @app_commands.describe(temperature="Please enter a number")
-    @app_commands.command(description="A command to convert temperatures to different scales")
+    @app_commands.command(
+        description="A command to convert temperatures to different scales"
+    )
     @app_commands.choices(
-    temp_system=[
-        Choice(name=locale_str("Celsius", command="convert_temperature", index=0), value="Celsius"),
-        Choice(name=locale_str("Fahrenheit", command="convert_temperature", index=1), value="Fahrenheit"),
-        Choice(name=locale_str("Kelvin", command="convert_temperature", index=2), value="Kelvin"),
-        Choice(name=locale_str("Rankine", command="convert_temperature", index=3), value="Rankine"),
-    ])
+        temp_system=locale_choices(
+            {"Celsius": "celsius", "Fahrenheit": "fahrenheit", "Kelvin": "kelvin", "Rankine": "rankine"},
+            command_name="convert_temperature",
+            option_name="temp_system",
+        )
+    )
     async def convert_temperature(
         self,
-        interaction: discord.Interaction,
-        temp_system: Temperature,
+        interaction: discord.Interaction[JDBot],
+        temp_system: app_commands.Choice[str],
         temperature: float,
     ):
-        temps = temp_system.convert_to(temperature)
+        temps = Temperature(temp_system.value).convert_to(temperature)
 
         if temps.celsius < 20:
             color = 0x0000FF
 
-        if temps.celsius >= 20 and temps.celsius <= 30:
+        elif temps.celsius >= 20 and temps.celsius <= 30:
             color = 0xFFA500
-
-        if temps.celsius > 30:
+        else:
             color = 0xFF0000
 
         temp_celsius = f"{temps.celsius:,}"
@@ -79,7 +79,9 @@ class Extra(commands.Cog):
 
     @convert_temperature.error
     async def convert_temperature_error(self, interaction: discord.Interaction, error):
-        await interaction.response.send_message(f"{error}! Please Send to this to my developer", ephemeral=True)
+        await interaction.response.send_message(
+            f"{error}! Please Send to this to my developer", ephemeral=True
+        )
         print(interaction.command)
         traceback.print_exc()
 

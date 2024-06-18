@@ -1,13 +1,16 @@
 import enum
 from typing import TYPE_CHECKING, Any, NamedTuple
 
+from discord import app_commands
 from discord.app_commands import locale_str
+
 
 class TemperatureReadings(NamedTuple):
     celsius: int
     fahrenheit: int
     kelvin: int
     rankine: int
+
 
 class Temperature(enum.Enum):
     celsius = "Celsius"
@@ -42,3 +45,18 @@ class Temperature(enum.Enum):
                 k = c + 273.15
 
         return TemperatureReadings(round(c, 1), round(f, 1), round(k, 1), round(r, 1))
+
+
+def locale_choices(
+    choices: dict[str, str] | list[str], /, command_name: str, option_name: str
+) -> list[app_commands.Choice]:
+    if isinstance(choices, list):
+        choices = {choice: choice for choice in choices}
+
+    return [
+        app_commands.Choice(
+            name=locale_str(name, key=f"{command_name}:{option_name}:{i}"),
+            value=value,
+        )
+        for i, (name, value) in enumerate(choices.items())
+    ]

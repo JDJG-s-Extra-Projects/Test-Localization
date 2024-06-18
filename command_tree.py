@@ -1,7 +1,8 @@
 from __future__ import annotations
 
 import pathlib
-from typing import Any, NotRequired, TypedDict
+import random
+from typing import TYPE_CHECKING, Any, NotRequired, TypedDict
 
 try:
     import orjson as json
@@ -10,8 +11,11 @@ except ImportError:
 
 import discord
 from discord import app_commands
-from discord.app_commands import TranslationContext, TranslationContextLocation, TranslationContextTypes, locale_str
+from discord.app_commands import TranslationContextLocation, TranslationContextTypes, locale_str
 
+
+if TYPE_CHECKING:
+    from .main import JDBot
 
 class LocaleCommandEmbedAuthor(TypedDict):
     name: str | None
@@ -46,13 +50,12 @@ class LocaleCommand(TypedDict):
     options: NotRequired[dict[str, LocaleCommandOption]]
     embeds: NotRequired[list[LocaleCommandEmbed]]
     content: NotRequired[str | None]
+    translator_id: str
 
 
 # for type hinting the translator
 class JDCommandTree(app_commands.CommandTree):
-    @property
-    def translator(self) -> JDCommandTranslator:
-        return super().translator  # type: ignore
+    translator: JDCommandTranslator  # type: ignore
 
 
 class JDCommandTranslator(app_commands.Translator):
@@ -85,6 +88,14 @@ class JDCommandTranslator(app_commands.Translator):
         self.cached_locales.clear()
         self.LOCALE_TO_FILE.clear()
 
+    def _ensure_translator_id(self, locale: discord.Locale, data: dict[str, LocaleCommand]) -> None:
+        for command in data.values():
+            if "translator_id" not in command:
+                raise ValueError((
+                    f'Missing translator_id for command "{command["name"]}"'
+                    f" in locale file {self.LOCALE_TO_FILE[locale]}. Please add it."
+                ))
+
     async def get_locale(
         self,
         locale: discord.Locale,
@@ -94,15 +105,25 @@ class JDCommandTranslator(app_commands.Translator):
 
         file = self.LOCALE_TO_FILE[locale]
         with open(f"{self.LOCALS_PATH}/{file}") as f:
-            self.cached_locales[locale] = data = json.loads(f.read())
+            data = json.loads(f.read())
+            self._ensure_translator_id(locale, data)
 
         return data
 
     async def get_command(self, locale: discord.Locale, command_name: str) -> LocaleCommand | None:
-        return (await self.get_locale(locale)).get(command_name)
+        locales = await self.get_locale(locale)
+        return locales.get(command_name)
+    
+    async def _get_translator(self, interaction: discord.Interaction[JDBot]) -> discord.User | None:
+        command = await self.get_command(interaction.locale, interaction.command.qualified_name)  # type: ignore
+        if not command:
+            raise ValueError(f"Command {interaction.command.qualified_name} not found in locale {interaction.locale}.")  # type: ignore
+        
+        translator_id = command.get("translator_id")
+        return await interaction.client.try_user(int(translator_id))
 
     async def translate_embeds(
-        self, interaction: discord.Interaction, embeds: list[discord.Embed], **string_formats: Any
+        self, interaction: discord.Interaction[JDBot], embeds: list[discord.Embed], **string_formats: Any
     ) -> list[discord.Embed]:
         new_embeds: list[discord.Embed] = []
 
@@ -117,8 +138,22 @@ class JDCommandTranslator(app_commands.Translator):
             embed = embed.copy()
             embed.title = await do_translate(embed.title, f"embed:{idx}:title")
             embed.description = await do_translate(embed.description, f"embed:{idx}:description")
-            embed.set_footer(text=await do_translate(embed.footer.text, f"embed:{idx}:footer"))
-            embed.set_author(name=await do_translate(embed.author.name, f"embed:{idx}:author"))
+
+            embed.set_footer(
+                text=await do_translate(embed.footer.text, f"embed:{idx}:footer"),
+                icon_url=embed.footer.icon_url
+            )
+
+            author_name = await do_translate(embed.author.name, f"embed:{idx}:author")
+            if random.randint(0, 4) == 4:
+                translator = await self._get_translator(interaction)
+                if translator:
+                    author_name = f"{f'{author_name} | ' if author_name else ''}Translated by {translator}"
+
+            embed.set_author(
+                name=author_name,
+                icon_url=embed.author.icon_url,
+            )
 
             for field_idx, field in enumerate(embed.fields.copy()):
                 field.name = await do_translate(field.name, f"embed:{idx}:fields:{field_idx}:name")
@@ -152,6 +187,19 @@ class JDCommandTranslator(app_commands.Translator):
                 command_name = context.data.qualified_name
             elif isinstance(context.data, discord.app_commands.Parameter):
                 command_name = context.data.command.qualified_name
+
+        if context.location is TranslationContextLocation.choice_name:
+            extras = string.extras
+            if "key" in extras:
+                try:
+                    command_name, option_name, idx = extras["key"].split(":")
+                except ValueError:
+                    raise ValueError(
+                        "Choice name requires you to pass the key in extras. Like `locale_str('key', key='command name:option name:index')`"
+                    )
+            
+                string.extras["index"] = int(idx)
+                string.extras["option"] = option_name
 
         command_name = string.extras.get("command") or command_name
 
