@@ -4,7 +4,7 @@
         "description": "un comando para convertir temperaturas en diferentes escalas",
         "options": {
             "temperature_unit": {
-                "name": "Unidades_de_temperatura",
+                "name": "unidades_de_temperatura",
                 "description": "Seleccione una unidad de temperatura del menú desplegable"
             },
             "temperature": {
