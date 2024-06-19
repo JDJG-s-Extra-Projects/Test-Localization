@@ -43,7 +43,7 @@ class JDBot(commands.Bot):
 intents = discord.Intents(guilds=True, messages=True, message_content=True)
 
 bot = JDBot(
-    command_prefix="tf?",
+    command_prefix="h$",
     intents=intents,
     chunk_guilds_at_startup=False,
     strip_after_prefix=True,
