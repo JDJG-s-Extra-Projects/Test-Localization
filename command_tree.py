@@ -159,6 +159,8 @@ class JDCommandTranslator(app_commands.Translator):
                 name=author_name,
                 icon_url=embed.author.icon_url,
             )
+            if not any((author_name, embed.author.icon_url)):
+                embed.remove_author()
 
             for field_idx, field in enumerate(embed.fields.copy()):
                 field.name = await do_translate(field.name, f"embed:{idx}:fields:{field_idx}:name")
