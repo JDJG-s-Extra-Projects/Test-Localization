@@ -5,7 +5,13 @@
         "options": {
             "temperature_unit": {
                 "name": null,
-                "description": null
+                "description": null,
+                "choices": [
+                    "Celsius",
+                    "Fahrenheit",
+                    "Kelvin",
+                    "Rankine"
+                ]
             },
             "temperature": {
                 "name": null,
