@@ -5,7 +5,13 @@
         "options": {
             "temperature_unit": {
                 "name": "温标单位",
-                "description": "请选择以下一种温标单位"
+                "description": "请选择以下一种温标单位",
+                "choices": [
+                    "摄氏度",
+                    "华氏度",
+                    "开尔文",
+                    "兰氏温标"
+                ]
             },
             "temperature": {
                 "name": "温度",
@@ -17,19 +23,19 @@
                 "title": "温度：",
                 "fields": [
                     {
-                        "name": "摄氏度：",
+                        "name": "摄氏度:",
                         "value": "{temp_celsius} °C"
                     },
                     {
-                        "name": "华氏度",
+                        "name": "华氏度:",
                         "value": "{temp_fahrenheit} °F"
                     },
                     {
-                        "name": "开尔文：",
+                        "name": "开尔文:",
                         "value": "{temp_kelvin} K"
                     },
                     {
-                        "name": "兰氏温标：",
+                        "name": "兰氏温标:",
                         "value": "{temp_rankine} °R"
                     }
                 ],

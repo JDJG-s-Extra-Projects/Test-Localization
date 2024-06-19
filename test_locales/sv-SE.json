@@ -5,7 +5,13 @@
         "options": {
             "temperature_unit": {
                 "name": "temperatur_enhet",
-                "description": "Välj en temperaturenhet från menyn"
+                "description": "Välj en temperaturenhet från menyn",
+                "choices": [
+                    "Celsius",
+                    "Fahrenheit",
+                    "Kelvin",
+                    "Rankine"
+                ]
             },
             "temperature": {
                 "name": "temperatur",

@@ -5,7 +5,13 @@
         "options": {
             "temperature_unit": {
                 "name": "temperatuureenheid",
-                "description": "De eenheid van de temperatuur die je wilt omrekenen"
+                "description": "De eenheid van de temperatuur die je wilt omrekenen",
+                "choices": [
+                    "Celsius",
+                    "Fahrenheit",
+                    "Kelvin",
+                    "Rankine"
+                ]
             },
             "temperature": {
                 "name": "temperatuur",

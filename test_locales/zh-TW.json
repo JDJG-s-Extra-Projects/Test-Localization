@@ -5,7 +5,13 @@
         "options": {
             "temperature_unit": {
                 "name": "溫標單位",
-                "description": "請選擇以下一種溫標單位"
+                "description": "請選擇以下一種溫標單位",
+                "choices": [
+                    "攝氏度",
+                    "華氏度",
+                    "開爾文",
+                    "蘭氏溫標"
+                ]
             },
             "temperature": {
                 "name": "溫度",
@@ -17,19 +23,19 @@
                 "title": "溫度：",
                 "fields": [
                     {
-                        "name": "攝氏度：",
+                        "name": "攝氏度:",
                         "value": "{temp_celsius} °C"
                     },
                     {
-                        "name": "華氏度",
+                        "name": "華氏度:",
                         "value": "{temp_fahrenheit} °F"
                     },
                     {
-                        "name": "開爾文：",
+                        "name": "開爾文:",
                         "value": "{temp_kelvin} K"
                     },
                     {
-                        "name": "蘭氏溫標：",
+                        "name": "蘭氏溫標:",
                         "value": "{temp_rankine} °R"
                     }
                 ],
