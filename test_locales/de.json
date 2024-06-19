@@ -15,7 +15,7 @@
             },
             "temperature": {
                 "name": "temperatur",
-                "description": "Bitte eine Zahl eingeben."
+                "description": "Bitte gebe eine Zahl ein."
             }
         },
         "embeds": [
