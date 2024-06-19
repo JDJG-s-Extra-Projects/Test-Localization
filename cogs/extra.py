@@ -62,7 +62,7 @@ class Extra(commands.Cog):
         temp_fahrenheit = f"{temps.fahrenheit:,}"
         temp_kelvin = f"{temps.kelvin:,}"
         temp_rankine = f"{temps.rankine:,}"
-        temperature_unit_value = str(temperature_unit.value)
+        temperature_unit_value = str(temperature_unit.name)
 
         embed = discord.Embed(title="Temperature:", color=color)
         embed.add_field(name="Celsius:", value="{temp_celsius} °C")
