@@ -4,8 +4,8 @@
         "description": "Sıcaklık birimler arasında dönüşüm yapabilen bir komut",
         "options": {
             "temperature_unit": {
-                "name": null,
-                "description": null,
+                "name": "birim",
+                "description": "Birim seçiniz.",
                 "choices": [
                     "Santigrat",
                     "Fahrenhayt",
@@ -14,8 +14,8 @@
                 ]
             },
             "temperature": {
-                "name": null,
-                "description": null
+                "name": "sıcaklık",
+                "description": "Dönüştürmek istediğiniz sıcaklığı girin."
             }
         },
         "embeds": [
