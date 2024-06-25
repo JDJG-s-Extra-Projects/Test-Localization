@@ -9,32 +9,20 @@
         "title": {
             "text": "Temperature:"
         },
-        "c_name": {
-            "text": "Celsius:"
-        },
-        "f_name": {
-            "text": "Fahrenheit:"
-        },
-        "k_name": {
-            "text": "Kelvin:"
-        },
-        "r_name": {
-            "text": "Rankine:"
+        "unit_names": {
+            "celsius": "Celsius:",
+            "fahrenheit": "Fahrenheit:",
+            "kelvin": "Kelvin:",
+            "rankine": "Rankine:"
         },
         "desc": {
             "text": "Chose:"
         },
-        "c_symbol": {
-            "text": "°C"
-        },
-        "f_symbol": {
-            "text": "°F"
-        },
-        "k_symbol": {
-            "text": "K"
-        },
-        "r_symbol": {
-            "text": "°R"
+        "unit_symbols": {
+            "celsius": "°C",
+            "fahrenheit": "°F",
+            "kelvin": "K",
+            "rankine": "°R"
         },
         "temperature_unit": {
             "name": "temperature_unit",
@@ -56,32 +44,20 @@
         "title": {
             "text": "Sıcaklık:"
         },
-        "c_name": {
-            "text": "Santigrat:"
-        },
-        "f_name": {
-            "text": "Fahrenhayt:"
-        },
-        "k_name": {
-            "text": "Kelvin:"
-        },
-        "r_name": {
-            "text": "Rankine:"
+        "unit_names": {
+            "celsius": "Santigrat:",
+            "fahrenheit": "Fahrenhayt:",
+            "kelvin": "Kelvin:",
+            "rankine": "Rankine:"
         },
         "desc": {
             "text": "Seçilen birim:"
         },
-        "c_symbol": {
-            "text": "°C"
-        },
-        "f_symbol": {
-            "text": "°F"
-        },
-        "k_symbol": {
-            "text": "K"
-        },
-        "r_symbol": {
-            "text": "°R"
+        "unit_symbols": {
+            "celsius": "°C",
+            "fahrenheit": "°F",
+            "kelvin": "K",
+            "rankine": "°R"
         },
         "temperature_unit": {
             "name": "birim",
@@ -103,32 +79,20 @@
         "title": {
             "text": "तापमान:"
         },
-        "c_name": {
-            "text": "सेल्सियस:"
-        },
-        "f_name": {
-            "text": "फ़ारेनहाइ:"
-        },
-        "k_name": {
-            "text": "केल्विन:"
-        },
-        "r_name": {
-            "text": "रैंकिन:"
+        "unit_names": {
+            "celsius": "सेल्सियस:",
+            "fahrenheit": "फ़ारेनहाइ:",
+            "kelvin": "केल्विन:",
+            "rankine": "रैंकिन:"
         },
         "desc": {
             "text": "अपनी पसंद चुनें:"
         },
-        "c_symbol": {
-            "text": "°C"
-        },
-        "f_symbol": {
-            "text": "°F"
-        },
-        "k_symbol": {
-            "text": "K"
-        },
-        "r_symbol": {
-            "text": "°R"
+        "unit_symbols": {
+            "celsius": "°C",
+            "fahrenheit": "°F",
+            "kelvin": "K",
+            "rankine": "°R"
         },
         "temperature_unit": {
             "name": "तापमान_इकाई",
@@ -150,32 +114,20 @@
         "title": {
             "text": "温度:"
         },
-        "c_name": {
-            "text": "摂氏:"
-        },
-        "f_name": {
-            "text": "華氏:"
-        },
-        "k_name": {
-            "text": "ケルビン:"
-        },
-        "r_name": {
-            "text": "ランキン度:"
+        "unit_names": {
+            "celsius": "摂氏:",
+            "fahrenheit": "華氏:",
+            "kelvin": "ケルビン:",
+            "rankine": "ランキン度:"
         },
         "desc": {
             "text": "選択:"
         },
-        "c_symbol": {
-            "text": "°C"
-        },
-        "f_symbol": {
-            "text": "°F"
-        },
-        "k_symbol": {
-            "text": "K"
-        },
-        "r_symbol": {
-            "text": "°R"
+        "unit_symbols": {
+            "celsius": "°C",
+            "fahrenheit": "°F",
+            "kelvin": "K",
+            "rankine": "°R"
         },
         "temperature_unit": {
             "name": "変換元単位",
@@ -197,32 +149,20 @@
         "title": {
             "text": "Lämpötila"
         },
-        "c_name": {
-            "text": "Celsius:"
-        },
-        "f_name": {
-            "text": "Fahrenheit:"
-        },
-        "k_name": {
-            "text": "Kelvin:"
-        },
-        "r_name": {
-            "text": "Rankine:"
+        "unit_names": {
+            "celsius": "Celsius:",
+            "fahrenheit": "Fahrenheit:",
+            "kelvin": "Kelvin:",
+            "rankine": "Rankine:"
         },
         "desc": {
             "text": "Valinta:"
         },
-        "c_symbol": {
-            "text": "°C"
-        },
-        "f_symbol": {
-            "text": "°F"
-        },
-        "k_symbol": {
-            "text": "K"
-        },
-        "r_symbol": {
-            "text": "°R"
+        "unit_symbols": {
+            "celsius": "°C",
+            "fahrenheit": "°F",
+            "kelvin": "K",
+            "rankine": "°R"
         },
         "temperature_unit": {
             "name": null,
@@ -244,32 +184,20 @@
         "title": {
             "text": "Temperatur:"
         },
-        "c_name": {
-            "text": "Celsius:"
-        },
-        "f_name": {
-            "text": "Fahrenheit:"
-        },
-        "k_name": {
-            "text": "Kelvin:"
-        },
-        "r_name": {
-            "text": "Rankine:"
+        "unit_names": {
+            "celsius": "Celsius:",
+            "fahrenheit": "Fahrenheit:",
+            "kelvin": "Kelvin:",
+            "rankine": "Rankine:"
         },
         "desc": {
             "text": "Valde:"
         },
-        "c_symbol": {
-            "text": "°C"
-        },
-        "f_symbol": {
-            "text": "°F"
-        },
-        "k_symbol": {
-            "text": "K"
-        },
-        "r_symbol": {
-            "text": "°R"
+        "unit_symbols": {
+            "celsius": "°C",
+            "fahrenheit": "°F",
+            "kelvin": "K",
+            "rankine": "°R"
         },
         "temperature_unit": {
             "name": "temperatur_enhet",
@@ -291,32 +219,20 @@
         "title": {
             "text": "Temperatuur:"
         },
-        "c_name": {
-            "text": "Celsius:"
-        },
-        "f_name": {
-            "text": "Fahrenheit:"
-        },
-        "k_name": {
-            "text": "Kelvin:"
-        },
-        "r_name": {
-            "text": "Rankine:"
+        "unit_names": {
+            "celsius": "Celsius:",
+            "fahrenheit": "Fahrenheit:",
+            "kelvin": "Kelvin:",
+            "rankine": "Rankine:"
         },
         "desc": {
             "text": "Gekozen:"
         },
-        "c_symbol": {
-            "text": "°C"
-        },
-        "f_symbol": {
-            "text": "°F"
-        },
-        "k_symbol": {
-            "text": "K"
-        },
-        "r_symbol": {
-            "text": "°R"
+        "unit_symbols": {
+            "celsius": "°C",
+            "fahrenheit": "°F",
+            "kelvin": "K",
+            "rankine": "°R"
         },
         "temperature_unit": {
             "name": "temperatuureenheid",
@@ -338,32 +254,20 @@
         "title": {
             "text": "Temperatur:"
         },
-        "c_name": {
-            "text": "Celsius:"
-        },
-        "f_name": {
-            "text": "Fahrenheit:"
-        },
-        "k_name": {
-            "text": "Kelvin:"
-        },
-        "r_name": {
-            "text": "Rankine:"
+        "unit_names": {
+            "celsius": "Celsius:",
+            "fahrenheit": "Fahrenheit:",
+            "kelvin": "Kelvin:",
+            "rankine": "Rankine:"
         },
         "desc": {
             "text": "Gewählt:"
         },
-        "c_symbol": {
-            "text": "°C"
-        },
-        "f_symbol": {
-            "text": "°F"
-        },
-        "k_symbol": {
-            "text": "K"
-        },
-        "r_symbol": {
-            "text": "°R"
+        "unit_symbols": {
+            "celsius": "°C",
+            "fahrenheit": "°F",
+            "kelvin": "K",
+            "rankine": "°R"
         },
         "temperature_unit": {
             "name": "temperatureinheit",
@@ -385,32 +289,20 @@
         "title": {
             "text": "Temperatura:"
         },
-        "c_name": {
-            "text": "Celsjusz:"
-        },
-        "f_name": {
-            "text": "Fahrenheit:"
-        },
-        "k_name": {
-            "text": "Kelvin:"
-        },
-        "r_name": {
-            "text": "Rankine:"
+        "unit_names": {
+            "celsius": "Celsjusz:",
+            "fahrenheit": "Fahrenheit:",
+            "kelvin": "Kelvin:",
+            "rankine": "Rankine:"
         },
         "desc": {
             "text": "Wybrane:"
         },
-        "c_symbol": {
-            "text": "°C"
-        },
-        "f_symbol": {
-            "text": "°F"
-        },
-        "k_symbol": {
-            "text": "K"
-        },
-        "r_symbol": {
-            "text": "°R"
+        "unit_symbols": {
+            "celsius": "°C",
+            "fahrenheit": "°F",
+            "kelvin": "K",
+            "rankine": "°R"
         },
         "temperature_unit": {
             "name": "jednostka_temperatury",
@@ -432,32 +324,20 @@
         "title": {
             "text": "Température:"
         },
-        "c_name": {
-            "text": "Celsius:"
-        },
-        "f_name": {
-            "text": "Fahrenheit:"
-        },
-        "k_name": {
-            "text": "Kelvin:"
-        },
-        "r_name": {
-            "text": "Rankine:"
+        "unit_names": {
+            "celsius": "Celsius:",
+            "fahrenheit": "Fahrenheit:",
+            "kelvin": "Kelvin:",
+            "rankine": "Rankine:"
         },
         "desc": {
             "text": "Choisi:"
         },
-        "c_symbol": {
-            "text": "°C"
-        },
-        "f_symbol": {
-            "text": "°F"
-        },
-        "k_symbol": {
-            "text": "K"
-        },
-        "r_symbol": {
-            "text": "°R"
+        "unit_symbols": {
+            "celsius": "°C",
+            "fahrenheit": "°F",
+            "kelvin": "K",
+            "rankine": "°R"
         },
         "temperature_unit": {
             "name": "unité_de_température",
@@ -479,32 +359,20 @@
         "title": {
             "text": "Temperatura:"
         },
-        "c_name": {
-            "text": "Celcius:"
-        },
-        "f_name": {
-            "text": "Fahrenheit:"
-        },
-        "k_name": {
-            "text": "Kelvin:"
-        },
-        "r_name": {
-            "text": "Rankine:"
+        "unit_names": {
+            "celsius": "Celcius:",
+            "fahrenheit": "Fahrenheit:",
+            "kelvin": "Kelvin:",
+            "rankine": "Rankine:"
         },
         "desc": {
             "text": "Eligió"
         },
-        "c_symbol": {
-            "text": "°C"
-        },
-        "f_symbol": {
-            "text": "°F"
-        },
-        "k_symbol": {
-            "text": "K"
-        },
-        "r_symbol": {
-            "text": "°R"
+        "unit_symbols": {
+            "celsius": "°C",
+            "fahrenheit": "°F",
+            "kelvin": "K",
+            "rankine": "°R"
         },
         "temperature_unit": {
             "name": "unidades_de_temperatura",
@@ -526,32 +394,20 @@
         "title": {
             "text": "Temperatura:"
         },
-        "c_name": {
-            "text": "Celcius:"
-        },
-        "f_name": {
-            "text": "Fahrenheit:"
-        },
-        "k_name": {
-            "text": "Kelvin:"
-        },
-        "r_name": {
-            "text": "Rankine:"
+        "unit_names": {
+            "celsius": "Celcius:",
+            "fahrenheit": "Fahrenheit:",
+            "kelvin": "Kelvin:",
+            "rankine": "Rankine:"
         },
         "desc": {
             "text": "Eligió"
         },
-        "c_symbol": {
-            "text": "°C"
-        },
-        "f_symbol": {
-            "text": "°F"
-        },
-        "k_symbol": {
-            "text": "K"
-        },
-        "r_symbol": {
-            "text": "°R"
+        "unit_symbols": {
+            "celsius": "°C",
+            "fahrenheit": "°F",
+            "kelvin": "K",
+            "rankine": "°R"
         },
         "temperature_unit": {
             "name": "unidades_de_temperatura",
@@ -573,32 +429,20 @@
         "title": {
             "text": "Temperatura:"
         },
-        "c_name": {
-            "text": "Celsius:"
-        },
-        "f_name": {
-            "text": "Fahrenheit:"
-        },
-        "k_name": {
-            "text": "Kelvin:"
-        },
-        "r_name": {
-            "text": "Rankine:"
+        "unit_names": {
+            "celsius": "Celsius:",
+            "fahrenheit": "Fahrenheit:",
+            "kelvin": "Kelvin:",
+            "rankine": "Rankine:"
         },
         "desc": {
             "text": "Selecionado:"
         },
-        "c_symbol": {
-            "text": "°C"
-        },
-        "f_symbol": {
-            "text": "°F"
-        },
-        "k_symbol": {
-            "text": "K"
-        },
-        "r_symbol": {
-            "text": "°R"
+        "unit_symbols": {
+            "celsius": "°C",
+            "fahrenheit": "°F",
+            "kelvin": "K",
+            "rankine": "°R"
         },
         "temperature_unit": {
             "name": null,
@@ -620,32 +464,20 @@
         "title": {
             "text": "温度："
         },
-        "c_name": {
-            "text": "摄氏度："
-        },
-        "f_name": {
-            "text": "华氏度"
-        },
-        "k_name": {
-            "text": "开尔文："
-        },
-        "r_name": {
-            "text": "兰氏温标："
+        "unit_names": {
+            "celsius": "摄氏度:",
+            "fahrenheit": "华氏度:",
+            "kelvin": "开尔文:",
+            "rankine": "兰氏温标:"
         },
         "desc": {
             "text": "请选择："
         },
-        "c_symbol": {
-            "text": "°C"
-        },
-        "f_symbol": {
-            "text": "°F"
-        },
-        "k_symbol": {
-            "text": "K"
-        },
-        "r_symbol": {
-            "text": "°R"
+        "unit_symbols": {
+            "celsius": "°C",
+            "fahrenheit": "°F",
+            "kelvin": "K",
+            "rankine": "°R"
         },
         "temperature_unit": {
             "name": "温标单位",
@@ -667,32 +499,20 @@
         "title": {
             "text": "溫度："
         },
-        "c_name": {
-            "text": "攝氏度："
-        },
-        "f_name": {
-            "text": "華氏度"
-        },
-        "k_name": {
-            "text": "開爾文："
-        },
-        "r_name": {
-            "text": "蘭氏溫標："
+        "unit_names": {
+            "celsius": "攝氏度:",
+            "fahrenheit": "華氏度:",
+            "kelvin": "開爾文:",
+            "rankine": "蘭氏溫標:"
         },
         "desc": {
             "text": "請選擇："
         },
-        "c_symbol": {
-            "text": "°C"
-        },
-        "f_symbol": {
-            "text": "°F"
-        },
-        "k_symbol": {
-            "text": "K"
-        },
-        "r_symbol": {
-            "text": "°R"
+        "unit_symbols": {
+            "celsius": "°C",
+            "fahrenheit": "°F",
+            "kelvin": "K",
+            "rankine": "°R"
         },
         "temperature_unit": {
             "name": "溫標單位",
@@ -714,32 +534,20 @@
         "title": {
             "text": "Temperature:"
         },
-        "c_name": {
-            "text": "Celsius:"
-        },
-        "f_name": {
-            "text": "Fahrenheit:"
-        },
-        "k_name": {
-            "text": "Kelvin:"
-        },
-        "r_name": {
-            "text": "Rankine:"
+        "unit_names": {
+            "celsius": "Celsius:",
+            "fahrenheit": "Fahrenheit:",
+            "kelvin": "Kelvin:",
+            "rankine": "Rankine:"
         },
         "desc": {
             "text": "Choose:"
         },
-        "c_symbol": {
-            "text": "°C"
-        },
-        "f_symbol": {
-            "text": "°F"
-        },
-        "k_symbol": {
-            "text": "K"
-        },
-        "r_symbol": {
-            "text": "°R"
+        "unit_symbols": {
+            "celsius": "°C",
+            "fahrenheit": "°F",
+            "kelvin": "K",
+            "rankine": "°R"
         },
         "temperature_unit": {
             "name": "temperature_unit",
