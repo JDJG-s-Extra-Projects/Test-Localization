@@ -64,6 +64,9 @@ class Extra(commands.Cog):
         temp_rankine = f"{temps.rankine:,}"
         temperature_unit_value = temperature_unit.name_localizations.get(interaction.locale, temperature_unit.name)
 
+        print(temperature_unit.name_localizations)
+        print(interaction.locale)
+
         embed = discord.Embed(title="Temperature:", color=color)
         embed.add_field(name="Celsius:", value="{temp_celsius} °C")
         embed.add_field(name="Fahrenheit:", value="{temp_fahrenheit} °F")
