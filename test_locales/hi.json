@@ -7,10 +7,10 @@
                 "name": "तापमान_इकाई",
                 "description": "ड्रॉपडाउन से तापमान की एक इकाई का चयन करें।",
                 "choices": [
-                    "celsius",
-                    "fahrenheit",
-                    "kelvin",
-                    "rankine"
+                    "सेल्सियस",
+                    "फ़ारेनहाइ",
+                    "केल्विन",
+                    "रैंकिन"
                 ]
             },
             "temperature": {

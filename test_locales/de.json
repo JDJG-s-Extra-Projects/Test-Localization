@@ -1,21 +1,21 @@
 {
     "convert_temperature": {
         "name": "temperatur_konvertieren",
-        "description": "Ein Befehl zum Umwandeln von Temperaturen in verschiedene Einheiten",
+        "description": "Ein Befehl zum Konvertieren von Temperaturen in verschiedene Maßstäbe",
         "options": {
             "temperature_unit": {
                 "name": "temperatureinheit",
                 "description": "Wähle eine Temperatureinheit aus der Liste.",
                 "choices": [
-                    "celsius",
-                    "fahrenheit",
-                    "kelvin",
-                    "rankine"
+                    "Celsius",
+                    "Fahrenheit",
+                    "Kelvin",
+                    "Rankine"
                 ]
             },
             "temperature": {
                 "name": "temperatur",
-                "description": "Bitte gib eine Zahl ein."
+                "description": "Bitte gebe eine Zahl ein."
             }
         },
         "embeds": [

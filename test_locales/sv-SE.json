@@ -7,10 +7,10 @@
                 "name": "temperatur_enhet",
                 "description": "Välj en temperaturenhet från menyn",
                 "choices": [
-                    "celsius",
-                    "fahrenheit",
-                    "kelvin",
-                    "rankine"
+                    "Celsius",
+                    "Fahrenheit",
+                    "Kelvin",
+                    "Rankine"
                 ]
             },
             "temperature": {

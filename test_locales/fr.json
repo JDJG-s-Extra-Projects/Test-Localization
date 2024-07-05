@@ -7,10 +7,10 @@
                 "name": "unité_de_température",
                 "description": "Sélectionnez une unité de température dans la liste.",
                 "choices": [
-                    "celsius",
-                    "fahrenheit",
-                    "kelvin",
-                    "rankine"
+                    "Celsius",
+                    "Fahrenheit",
+                    "Kelvin",
+                    "Rankine"
                 ]
             },
             "temperature": {
