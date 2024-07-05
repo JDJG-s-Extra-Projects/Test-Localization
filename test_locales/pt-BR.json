@@ -4,8 +4,8 @@
         "description": "Um comando para converter temperaturas para diferentes escalas",
         "options": {
             "temperature_unit": {
-                "name": null,
-                "description": null,
+                "name": "unidade_de_temperatura",
+                "description": "Selecione uma unidade de temperatura no menu abaixo",
                 "choices": [
                     "Celsius",
                     "Fahrenheit",
@@ -14,8 +14,8 @@
                 ]
             },
             "temperature": {
-                "name": null,
-                "description": null
+                "name": "temperatura",
+                "description": "Insira um número"
             }
         },
         "embeds": [

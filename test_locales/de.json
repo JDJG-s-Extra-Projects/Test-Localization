@@ -1,7 +1,7 @@
 {
     "convert_temperature": {
         "name": "temperatur_konvertieren",
-        "description": "Ein Befehl zum Konvertieren von Temperaturen in verschiedene Maßstäbe",
+        "description": "Ein Befehl zum Umwandeln von Temperaturen in verschiedene Einheiten",
         "options": {
             "temperature_unit": {
                 "name": "temperatureinheit",
@@ -15,7 +15,7 @@
             },
             "temperature": {
                 "name": "temperatur",
-                "description": "Bitte gebe eine Zahl ein."
+                "description": "Bitte gib eine Zahl ein."
             }
         },
         "embeds": [

@@ -1,7 +1,7 @@
 {
     "convert_temperature": {
         "name": "温度_変換",
-        "description": "温度を変換します:",
+        "description": "温度を変換します。",
         "options": {
             "temperature_unit": {
                 "name": "変換元単位",
