@@ -4,18 +4,18 @@
         "description": "Komento lämpötilojen muuntamista varten",
         "options": {
             "temperature_unit": {
-                "name": null,
-                "description": null,
+                "name": "Lämpötilayksikkö",
+                "description": "Valitse lämpötilayksikkö valikosta",
                 "choices": [
-                    "Celsius",
-                    "Fahrenheit",
-                    "Kelvin",
-                    "Rankine"
+                    "°C",
+                    "°F",
+                    "K",
+                    "°R"
                 ]
             },
             "temperature": {
-                "name": null,
-                "description": null
+                "name": "Lämpötila",
+                "description": "Syötä numero."
             }
         },
         "embeds": [

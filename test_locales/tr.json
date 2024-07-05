@@ -7,10 +7,10 @@
                 "name": "birim",
                 "description": "Birim seçiniz.",
                 "choices": [
-                    "Santigrat",
-                    "Fahrenhayt",
-                    "Kelvin",
-                    "Rankine"
+                    "°C",
+                    "°F",
+                    "K",
+                    "°R"
                 ]
             },
             "temperature": {

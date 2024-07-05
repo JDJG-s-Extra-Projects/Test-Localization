@@ -1,11 +1,11 @@
 {
     "convert_temperature": {
-        "name": "转换温度",
-        "description": "一个可以转换温度至不同温标的指令",
+        "name": "온도_변환",
+        "description": "특정 단위의 온도를 다른 온도 단위들로 변환시켜 줍니다.",
         "options": {
             "temperature_unit": {
-                "name": "温标单位",
-                "description": "请选择以下一种温标单位",
+                "name": "변환할_온도",
+                "description": "다른 온도 단위로 변환시킬 온도 단위를 선택합니다.",
                 "choices": [
                     "°C",
                     "°F",
@@ -14,36 +14,36 @@
                 ]
             },
             "temperature": {
-                "name": "温度",
-                "description": "请输入数字"
+                "name": "온도",
+                "description": "단위를 제외한 온도(숫자)를 입력해 주세요."
             }
         },
         "embeds": [
             {
-                "title": "温度：",
+                "title": "온도 변환됨",
                 "fields": [
                     {
-                        "name": "摄氏度:",
+                        "name": "섭씨",
                         "value": "{temp_celsius} °C"
                     },
                     {
-                        "name": "华氏度:",
+                        "name": "화씨",
                         "value": "{temp_fahrenheit} °F"
                     },
                     {
-                        "name": "开尔文:",
+                        "name": "절대온도(켈빈)",
                         "value": "{temp_kelvin} K"
                     },
                     {
-                        "name": "兰氏温标:",
+                        "name": "란씨(랭킨)",
                         "value": "{temp_rankine} °R"
                     }
                 ],
                 "footer": {
-                    "text": "请选择： {temperature_unit_value}"
+                    "text": "선택한 온도: {temperature_unit_value}"
                 }
             }
         ],
-        "translator_id": "869928921574035486"
+        "translator_id": "622098032854433813"
     }
 }
