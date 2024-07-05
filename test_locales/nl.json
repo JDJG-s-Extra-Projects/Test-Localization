@@ -7,10 +7,10 @@
                 "name": "temperatuureenheid",
                 "description": "De eenheid van de temperatuur die je wilt omrekenen",
                 "choices": [
-                    "Celsius",
-                    "Fahrenheit",
-                    "Kelvin",
-                    "Rankine"
+                    "celsius",
+                    "fahrenheit",
+                    "kelvin",
+                    "rankine"
                 ]
             },
             "temperature": {

@@ -7,10 +7,10 @@
                 "name": "溫標單位",
                 "description": "請選擇以下一種溫標單位",
                 "choices": [
-                    "攝氏度",
-                    "華氏度",
-                    "開爾文",
-                    "蘭氏溫標"
+                    "celsius",
+                    "fahrenheit",
+                    "kelvin",
+                    "rankine"
                 ]
             },
             "temperature": {
