@@ -4,7 +4,7 @@
         "description": "Komento lämpötilojen muuntamista varten",
         "options": {
             "temperature_unit": {
-                "name": "Lämpötilayksikkö",
+                "name": "lämpötilayksikkö",
                 "description": "Valitse lämpötilayksikkö valikosta",
                 "choices": [
                     "Celsius",
@@ -14,7 +14,7 @@
                 ]
             },
             "temperature": {
-                "name": "Lämpötila",
+                "name": "lämpötila",
                 "description": "Syötä numero."
             }
         },
