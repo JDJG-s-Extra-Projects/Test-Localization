@@ -1,0 +1,49 @@
+{
+    "convert_temperature": {
+        "name": "chuyển_đổi_nhiệt_độ",
+        "description": "Một loại lệnh để chuyển đổi nhiệt độ thành loại đo khác nhau",
+        "options": {
+            "temperature_unit": {
+                "name": "đơn_vị_của_nhiệt_độ",
+                "description": "Chọn một đơn vị của nhiệt độ từ danh sách dưới đây.",
+                "choices": [
+                    "Độ C",
+                    "độ F",
+                    "Nhiệt độ đo Kelvin",
+                    "Nhiệt độ đo Rankine"
+                ]
+            },
+            "temperature": {
+                "name": "nhiệt_độ",
+                "description": "Vui lòng gõ một số bất kì"
+            }
+        },
+        "embeds": [
+            {
+                "title": "Nhiệt độ:",
+                "fields": [
+                    {
+                        "name": "Độ C:",
+                        "value": "{temp_celsius} °C"
+                    },
+                    {
+                        "name": "độ F:",
+                        "value": "{temp_fahrenheit} °F"
+                    },
+                    {
+                        "name": "Nhiệt độ đo Kelvin:",
+                        "value": "{temp_kelvin} K"
+                    },
+                    {
+                        "name": "Nhiệt độ đo Rankine:",
+                        "value": "{temp_rankine} °R"
+                    }
+                ],
+                "footer": {
+                    "text": "Đã chọn: {temperature_unit_value}"
+                }
+            }
+        ],
+        "translator_id": "444360808412086292"
+    }
+}
