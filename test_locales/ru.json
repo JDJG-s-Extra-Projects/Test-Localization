@@ -1,0 +1,49 @@
+{
+    "convert_temperature": {
+        "name": "конвертация_температур",
+        "description": "Перевод температуры в разные единицы",
+        "options": {
+            "temperature_unit": {
+                "name": "единица_температуры",
+                "description": "Пожалуйста выберите единицу температуры которую вы хотите использовать!",
+                "choices": [
+                    "Цельсий:",
+                    "Фаренгейт:",
+                    "Кельвин:",
+                    "Ранкин:"
+                ]
+            },
+            "temperature": {
+                "name": "температура",
+                "description": "Пожалуйста введите ваше число!"
+            }
+        },
+        "embeds": [
+            {
+                "title": "Температура:",
+                "fields": [
+                    {
+                        "name": "Цельсий:",
+                        "value": "{temp_celsius} °C"
+                    },
+                    {
+                        "name": "Фаренгейт:",
+                        "value": "{temp_fahrenheit} °F"
+                    },
+                    {
+                        "name": "Кельвин:",
+                        "value": "{temp_kelvin} K"
+                    },
+                    {
+                        "name": "Ранкин:",
+                        "value": "{temp_rankine} °R"
+                    }
+                ],
+                "footer": {
+                    "text": "Выберите ваш вариант: {temperature_unit_value}"
+                }
+            }
+        ],
+        "translator_id": "540142383270985738"
+    }
+}
