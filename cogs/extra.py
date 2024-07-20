@@ -62,9 +62,12 @@ class Extra(commands.Cog):
         temp_fahrenheit = f"{temps.fahrenheit:,}"
         temp_kelvin = f"{temps.kelvin:,}"
         temp_rankine = f"{temps.rankine:,}"
-        temperature_unit_value = temperature_unit.name_localizations.get(interaction.locale, temperature_unit.name)
 
-        print(temperature_unit.name_localizations)
+        temperature_unit_value = await interaction.client.tree.translator.translate_choice_name_from_locale_key(
+            interaction.locale, temperature_unit._locale_name
+        ) or temperature_unit.value
+
+        print(temperature_unit.name_localizations, temperature_unit_value, temperature_unit._locale_name)
         print(interaction.locale)
 
         embed = discord.Embed(title="Temperature:", color=color)

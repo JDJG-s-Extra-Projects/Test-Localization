@@ -171,6 +171,48 @@ class JDCommandTranslator(app_commands.Translator):
 
         return new_embeds
 
+    async def translate_choice_name(
+        self,
+        locale: discord.Locale,
+        command: str | LocaleCommand,
+        option_name: str,
+        index: int,
+    ) -> str | None:
+        _command = await self.get_command(locale, command) if not isinstance(command, dict) else command
+        if not _command:
+            return None
+
+        choices = _command.get("options", {}).get(option_name, {}).get("choices")
+        if not choices:
+            return None
+
+        return choices[index]
+
+    async def translate_choice_name_from_locale_key(
+        self,
+        locale: discord.Locale,
+        locale_key: locale_str | None,
+    ) -> str | None:
+        if not locale_key:
+            return None
+
+        if not locale_key.extras or "key" not in locale_key.extras:
+            raise ValueError("Choice name requires you to pass the key in extras. Like `locale_str('key', key='command name:option name:index')`")
+
+        try:
+            command_name, option_name, idx = locale_key.extras["key"].split(":")
+        except ValueError:
+            raise ValueError(
+                "Choice name requires you to pass the key in extras. Like `locale_str('key', key='command name:option name:index')`"
+            )
+        
+        idx = int(idx)
+        command = await self.get_command(locale, command_name)
+        if not command:
+            return None
+        
+        return await self.translate_choice_name(locale, command, option_name, idx)
+
     async def translate_content(self, interaction: discord.Interaction, content: str, **string_formats: Any) -> str:
         translated = await interaction.translate(locale_str(content, key="content"), data=interaction.command)
         if translated and string_formats:
@@ -259,12 +301,7 @@ class JDCommandTranslator(app_commands.Translator):
                 raise ValueError(
                     "Choice name requires you to pass the option name in extras. Like `locale_str('key', option='option')`"
                 )
-
-            choices = command.get("options", {}).get(option_name, {}).get("choices")
-            if not choices:
-                return None
-
-            return choices[idx]
+            return await self.translate_choice_name(locale, command, option_name, idx)
 
         elif context.location is TranslationContextLocation.other:
             key: str = string.extras.get("key") or ""
