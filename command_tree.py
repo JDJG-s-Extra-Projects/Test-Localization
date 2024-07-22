@@ -59,7 +59,7 @@ class JDCommandTree(app_commands.CommandTree):
 
 
 class JDCommandTranslator(app_commands.Translator):
-    LOCALS_PATH = "./test_locales"
+    LOCALS_PATH = "./locales"
     # dynamically loaded in load
     LOCALE_TO_FILE: dict[discord.Locale, str] = {}
     EXCLUDE_LOCALES: list[discord.Locale] = []
