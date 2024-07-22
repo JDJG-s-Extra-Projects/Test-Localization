@@ -7,10 +7,10 @@
                 "name": "jedinica_temperature",
                 "description": "Please enter a number",
                 "choices": [
-                    "celsius",
-                    "fahrenheit",
-                    "kelvin",
-                    "rankine"
+                    "Celzij",
+                    "Fahrenheit",
+                    "Kelvin",
+                    "Rankine"
                 ]
             },
             "temperature": {
