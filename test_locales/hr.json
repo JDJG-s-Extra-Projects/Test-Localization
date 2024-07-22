@@ -1,0 +1,49 @@
+{
+    "convert_temperature": {
+        "name": "pretvori_temperaturu",
+        "description": "A command to convert temperatured to different scales",
+        "options": {
+            "temperature_unit": {
+                "name": "jedinica_temperature",
+                "description": "Please enter a number",
+                "choices": [
+                    "celsius",
+                    "fahrenheit",
+                    "kelvin",
+                    "rankine"
+                ]
+            },
+            "temperature": {
+                "name": "temperatura",
+                "description": "Unesite broj"
+            }
+        },
+        "embeds": [
+            {
+                "title": "Temperatura:",
+                "fields": [
+                    {
+                        "name": "Celzij:",
+                        "value": "{temp_celsius} °C"
+                    },
+                    {
+                        "name": "Fahrenheit:",
+                        "value": "{temp_fahrenheit} °F"
+                    },
+                    {
+                        "name": "Kelvin:",
+                        "value": "{temp_kelvin} K"
+                    },
+                    {
+                        "name": "Rankine:",
+                        "value": "{temp_rankine} °R"
+                    }
+                ],
+                "footer": {
+                    "text": "Odaberi: {temperature_unit_value}"
+                }
+            }
+        ],
+        "translator_id": "700210850513944576"
+    }
+}
