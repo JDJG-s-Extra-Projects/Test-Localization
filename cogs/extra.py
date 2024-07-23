@@ -108,8 +108,15 @@ class Extra(commands.Cog):
         speed="Please enter a number",
     )
     @app_commands.command(description="A command to convert speeds to different scales")
-    async def convert_speed(self, interaction: discord.Interaction, speed_unit: Speed, speed: float):
-        speeds = speed_unit.convert_to(speed)
+    @app_commands.choices(
+        speed_unit=locale_choices(
+            Speed,
+            command_name="convert_speed",
+            option_name="speed_unit",
+        )
+    )
+    async def convert_speed(self, interaction: discord.Interaction, speed_unit: app_commands.Choice[str], speed: float):
+        speeds = Speed[speed_unit.value].convert_to(speed)
 
         if speeds.miles <= 25:
             color = 0xFFFF00
