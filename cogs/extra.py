@@ -116,7 +116,7 @@ class Extra(commands.Cog):
         )
     )
     async def convert_speed(self, interaction: discord.Interaction, speed_unit: app_commands.Choice[str], speed: float):
-        speeds = Speed[speed_unit.value].convert_to(speed)
+        speeds = Speed[speed_unit.name].convert_to(speed)
 
         if speeds.miles <= 25:
             color = 0xFFFF00
