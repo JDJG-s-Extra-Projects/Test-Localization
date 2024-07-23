@@ -54,12 +54,12 @@
                 "name": "speed_unit",
                 "description": "Select a Unit of Speed from the dropdown.",
                 "choices": [
-                    "Miles",
-                    "Kilometers",
-                    "Meters",
-                    "Feet",
-                    "MegaMeters",
-                    "Constants (Speed of Light)"
+                    "miles",
+                    "kilometers",
+                    "meters",
+                    "feet",
+                    "megaMeters",
+                    "constants (Speed of Light)"
                 ]
             },
             "speed": {
