@@ -7,7 +7,7 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 
-from local_utils import Temperature, locale_choices
+from local_utils import Speed, Temperature, locale_choices
 
 if typing.TYPE_CHECKING:
     from main import JDBot
@@ -93,6 +93,86 @@ class Extra(commands.Cog):
 
     @convert_temperature.error
     async def convert_temperature_error(self, interaction: discord.Interaction, error):
+        await interaction.response.send_message(f"{error}! Please Send to this to my developer", ephemeral=True)
+        print(interaction.command)
+        traceback.print_exc()
+
+    @app_commands.user_install()
+    @app_commands.guild_install()
+    @app_commands.allowed_contexts(guilds=True, dms=True, private_channels=True)
+    @app_commands.describe(
+        speed_unit="Select a Unit of Speed from the dropdown.",
+        speed="Please enter a number",
+    )
+    @app_commands.command(description="A command to convert speeds to different scales")
+    async def convert_speed(self, interaction: discord.Interaction, speed_unit: Speed, speed: float):
+        speeds = speed_unit.convert_to(speed)
+
+        if speeds.miles <= 25:
+            color = 0xFFFF00
+
+            # 25 miles per hour in a us residence zone
+            # yellow for a small speed
+
+        if speeds.miles > 25 and speeds.miles <= 55:
+
+            color = 0x8450
+
+            # 55 mph speed limit on rural highways
+            # green for about a not so slow speed.
+
+        if speeds.miles > 55 and speeds.miles <= 70:
+
+            color = 0x26F7FD
+
+            # 70 mph is the max on rural interstate highways
+            # color is choosen from the hydro thunder hurriance boost colors as close as I could match
+
+        # https://highways.dot.gov/safety/speed-management/speed-limit-basics
+        # information gathered from here.
+
+        if speeds.miles > 70 and speeds.miles <= 85:
+
+            # texas has the highest maximum sped limit at 85 mph according to
+            # https://worldpopulationreview.com/state-rankings/speed-limit-map-by-state
+
+            color = 0x8B
+
+            # color choosen for faster boost color essentially
+
+        if speeds.miles > 85 and speeds.miles <= 212.81:
+
+            # https://rerev.com/articles/how-fast-do-nascar-cars-go
+            # 212.809 miles per hour is the maximum they go up to.
+            # rounded to 212.81 for convivence
+
+            color = 0xCC0202
+            # red for please don't go this speed normally.
+
+        if speeds.miles > 212.81:
+            # basically please don't go more than this speed unless you are in a plane or so other faster vehicle
+            color = 0x0
+            # pure black for emphasis.
+
+        embed = discord.Embed(title="Speed:", color=color)
+
+        embed.add_field(name="Miles:", value=f"{speeds.miles:,} mi")
+        embed.add_field(name="Kilometers:", value=f"{speeds.kilometers:,} km")
+        embed.add_field(name="Meters:", value=f"{speeds.meters:,} m")
+        embed.add_field(name="Feet", value=f"{speeds.feet:,} ft")
+        embed.add_field(name="Megameters", value=f"{speeds.megameters:,} Mm")
+        # speed of light's name value needs a better name
+        embed.add_field(name="Constants (Speed of Light):", value=f"{speeds.light:,} C")
+        # megameters and light speed are elite dangerous references
+        # see https://www.reddit.com/r/EliteDangerous/s/1AgiKH9Xj0
+
+        embed.set_footer(text=f"Chose: {speed_unit.value}")
+        await interaction.response.send_message(embed=embed)
+
+        # embed could be be better
+
+    @convert_speed.error
+    async def convert_speed_error(self, interaction: discord.Interaction, error):
         await interaction.response.send_message(f"{error}! Please Send to this to my developer", ephemeral=True)
         print(interaction.command)
         traceback.print_exc()
