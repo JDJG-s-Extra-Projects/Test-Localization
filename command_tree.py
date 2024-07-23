@@ -197,7 +197,9 @@ class JDCommandTranslator(app_commands.Translator):
             return None
 
         if not locale_key.extras or "key" not in locale_key.extras:
-            raise ValueError("Choice name requires you to pass the key in extras. Like `locale_str('key', key='command name:option name:index')`")
+            raise ValueError(
+                "Choice name requires you to pass the key in extras. Like `locale_str('key', key='command name:option name:index')`"
+            )
 
         try:
             command_name, option_name, idx = locale_key.extras["key"].split(":")
@@ -205,12 +207,12 @@ class JDCommandTranslator(app_commands.Translator):
             raise ValueError(
                 "Choice name requires you to pass the key in extras. Like `locale_str('key', key='command name:option name:index')`"
             )
-        
+
         idx = int(idx)
         command = await self.get_command(locale, command_name)
         if not command:
             return None
-        
+
         return await self.translate_choice_name(locale, command, option_name, idx)
 
     async def translate_content(self, interaction: discord.Interaction, content: str, **string_formats: Any) -> str:

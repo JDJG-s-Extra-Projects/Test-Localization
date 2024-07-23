@@ -46,6 +46,7 @@ class Temperature(enum.Enum):
 
         return TemperatureReadings(round(c, 1), round(f, 1), round(k, 1), round(r, 1))
 
+
 class SpeedReadings(NamedTuple):
     miles: float
     kilometers: float
