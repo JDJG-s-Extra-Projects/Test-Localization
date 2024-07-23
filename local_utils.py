@@ -126,15 +126,24 @@ class Speed(enum.Enum):
 
 
 def locale_choices(
-    choices: dict[str, str] | list[str], /, command_name: str, option_name: str
+    choices: dict[str, str] | list[str] | type[enum.Enum],
+    /,
+    command_name: str,
+    option_name: str,
 ) -> list[app_commands.Choice]:
     if isinstance(choices, list):
-        choices = {choice: choice for choice in choices}
+        _choices = {choice: choice for choice in choices}
+    elif isinstance(choices, type(enum.Enum)):
+        _choices = {choice.name: choice.value for choice in list(choices)}  # type: ignore
+    elif isinstance(choices, dict):
+        _choices = choices
+    else:
+        raise TypeError("choices must be a list, enum, or dict")
 
     return [
         app_commands.Choice(
             name=locale_str(name, key=f"{command_name}:{option_name}:{i}"),
             value=value,
         )
-        for i, (name, value) in enumerate(choices.items())
+        for i, (name, value) in enumerate(_choices.items())
     ]
