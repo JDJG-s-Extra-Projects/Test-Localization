@@ -1,16 +1,16 @@
 {
     "convert_temperature": {
         "name": "pretvori_temperaturu",
-        "description": "A command to convert temperatured to different scales",
+        "description": "Naredba za pretvaranje temperatura u različite skale",
         "options": {
             "temperature_unit": {
                 "name": "jedinica_temperature",
-                "description": "Please enter a number",
+                "description": "Unesite broj",
                 "choices": [
-                    "Celzij:",
-                    "Fahrenheit:",
-                    "Kelvin:",
-                    "Rankine:"
+                    "Celzij",
+                    "Fahrenheit",
+                    "Kelvin",
+                    "Rankine"
                 ]
             },
             "temperature": {
