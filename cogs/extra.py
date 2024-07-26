@@ -70,9 +70,6 @@ class Extra(commands.Cog):
             or temperature_unit.value
         )
 
-        print(temperature_unit.name_localizations, temperature_unit_value, temperature_unit._locale_name)
-        print(interaction.locale)
-
         embed = discord.Embed(title="Temperature:", color=color)
         embed.add_field(name="Celsius:", value="{temp_celsius} °C")
         embed.add_field(name="Fahrenheit:", value="{temp_fahrenheit} °F")
@@ -164,22 +161,45 @@ class Extra(commands.Cog):
             color = 0x0
             # pure black for emphasis.
 
-        embed = discord.Embed(title="Speed:", color=color)
+        speeds_miles = f"{speeds.miles:,}"
+        speeds_kilometers = f"{speeds.kilometers:,}"
+        speeds_meters = f"{speeds.meters:,}"
+        speeds_feet = f"{speeds.feet:,}"
+        speed_megameters = f"{speeds.megameters:,}"
+        speeds_light = f"{speeds.light:,}"
 
-        embed.add_field(name="Miles:", value=f"{speeds.miles:,} mi")
-        embed.add_field(name="Kilometers:", value=f"{speeds.kilometers:,} km")
-        embed.add_field(name="Meters:", value=f"{speeds.meters:,} m")
-        embed.add_field(name="Feet", value=f"{speeds.feet:,} ft")
-        embed.add_field(name="Megameters", value=f"{speeds.megameters:,} Mm")
-        # speed of light's name value needs a better name
-        embed.add_field(name="Constants (Speed of Light):", value=f"{speeds.light:,} C")
+        speed_unit_value = (
+            await interaction.client.tree.translator.translate_choice_name_from_locale_key(
+                interaction.locale, speed_unit._locale_name
+            )
+            or speed_unit.value
+        )
+
+        embed = discord.Embed(title="Speed:", color=color)
+        embed.add_field(name="Miles:", value= f"{speeds_miles} mi")
+        embed.add_field(name="Kilometers:", value= f"{speeds_kilometers} km")
+        embed.add_field(name="Meters:", value=f"{speeds_meters} m")
+        embed.add_field(name="Feet", value=f"{speeds_feet} ft")
+        embed.add_field(name="Megameters", value=f"{speed_megameters} Mm")
+        embed.add_field(name="Constants (Speed of Light):", value=f"{speeds_light} C")
+
         # megameters and light speed are elite dangerous references
         # see https://www.reddit.com/r/EliteDangerous/s/1AgiKH9Xj0
 
-        embed.set_footer(text=f"Chose: {speed_unit.value}")
-        await interaction.response.send_message(embed=embed)
+        embed.set_footer(text=f"Chose: {speed_unit_value}")
 
-        # embed could be be better
+        embeds = await self.bot.tree.translator.translate_embeds(
+            interaction,
+            [embed],
+            speed_miles=speed_miles,
+            speeds_kilometers=speeds_kilometers,
+            speeds_meters=speeds_meters,
+            speeds_feet=speeds_feet,
+            speed_megameters=speed_megameters,
+            speeds_light=speeds_light,
+            speed_unit_value=speed_unit_value,
+        )
+        await interaction.response.send_message(embeds=embeds)
 
     @convert_speed.error
     async def convert_speed_error(self, interaction: discord.Interaction, error):

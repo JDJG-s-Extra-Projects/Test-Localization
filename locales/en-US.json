@@ -81,7 +81,7 @@
                     },
                     {
                         "name": "Meters:",
-                        "value": "{speeds_megameters} m"
+                        "value": "{speeds_meters} m"
                     },
                     {
                         "name": "Feet:",
