@@ -718,5 +718,113 @@
             "description": "Voer een getal in"
         },
         "translator_id": "150665783268212746"
+    },
+    "cs": {
+        "name": {
+            "text": "převod_rychlosti"
+        },
+        "command_desc": {
+            "text": "Příkaz pro převod rychlosti do různých stupnic"
+        },
+        "title": {
+            "text": "Rychlost:"
+        },
+        "unit_names": {
+            "miles": "Míle:",
+            "kilometers": "Kilometry:",
+            "meters": "Metry:",
+            "feet": "Stopy:",
+            "megameters": "Megametry",
+            "light": "Konstanty (Rychlost světla):"
+        },
+        "unit_symbols": {
+            "miles": "mi",
+            "kilometers": "km",
+            "meters": "m",
+            "feet": "ft",
+            "megameters": "Mm",
+            "light": "C"
+        },
+        "speed_unit": {
+            "name": "rychlostní_jednotka",
+            "description": "Vyberte jednotku rychlosti z nabídky."
+        },
+        "speed": {
+            "name": "rychlost",
+            "description": "Zadejte prosím hodnotu"
+        },
+        "translator_id": "344176097300054016"
+    },
+    "lt": {
+        "name": {
+            "text": "konvertuoti_greitį"
+        },
+        "command_desc": {
+            "text": "Komanda konvertuoti temperatūra į skirtingas skales"
+        },
+        "title": {
+            "text": "Greitis:"
+        },
+        "unit_names": {
+            "miles": "Mylios:",
+            "kilometers": "Kilometrai:",
+            "meters": "Metrai:",
+            "feet": "Pėdos:",
+            "megameters": "MegaMetrai",
+            "light": "Konstantos (Šviesos greitis):"
+        },
+        "unit_symbols": {
+            "miles": "mi",
+            "kilometers": "km",
+            "meters": "m",
+            "feet": "ft",
+            "megameters": "Mm",
+            "light": "C"
+        },
+        "speed_unit": {
+            "name": "greičio_vienetas",
+            "description": "Pasirinkite greičio vienetą iš išskleidžiamos meniu."
+        },
+        "speed": {
+            "name": "greitis",
+            "description": "Įveskite skaičių"
+        },
+        "translator_id": "673129564511273000"
+    },
+    "id": {
+        "name": {
+            "text": "konvert_kecepatan"
+        },
+        "command_desc": {
+            "text": "Sebuah perintah untuk mengubah kecepatan menjadi skala yang berbeda"
+        },
+        "title": {
+            "text": "Kecepatan:"
+        },
+        "unit_names": {
+            "miles": "Mil:",
+            "kilometers": "Kilometer",
+            "meters": "Meter",
+            "feet": "Kaki:",
+            "megameters": "MegaMeter",
+            "light": "Konstanta (Kecepatan Cahaya):"
+        },
+        "unit_symbols": {
+            "miles": "mi",
+            "kilometers": "km",
+            "meters": "m",
+            "feet": "ft",
+            "megameters": "Mm",
+            "light": "C"
+        },
+        "speed_unit": {
+            "name": "satuan_kecepatan",
+            "description": "Pilih satuan kecepatan dari pilihan dropdown."
+        },
+        "speed": {
+            "name": "kecepatan",
+            "description": "Pilihlah sebuah nomor"
+        },
+        "translator_id": "781708312466554940"
     }
 }
