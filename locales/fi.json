@@ -51,7 +51,7 @@
         "description": "Komento nopeuden muuntamiseen eri asteikoille.",
         "options": {
             "speed_unit": {
-                "name": "Nopeusyksikkö",
+                "name": "nopeusyksikkö",
                 "description": "Valitse nopeusyksikkö valikosta alla.",
                 "choices": [
                     "Mailia",
