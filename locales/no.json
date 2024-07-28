@@ -1,0 +1,106 @@
+{
+    "convert_temperature": {
+        "name": "konverter_temperatur",
+        "description": "En kommando for å konvertere temperaturer til forskjellige skalaer",
+        "options": {
+            "temperature_unit": {
+                "name": "temperature_unit",
+                "description": "Velg en temperatur-enhet fra rullegardinmenyen.",
+                "choices": [
+                    "Celsius",
+                    "Fahrenheit",
+                    "Kelvin",
+                    "Rankine"
+                ]
+            },
+            "temperature": {
+                "name": "temperature",
+                "description": "Vennligst skriv inn et tall"
+            }
+        },
+        "embeds": [
+            {
+                "title": "Temperatur:",
+                "fields": [
+                    {
+                        "name": "Celsius:",
+                        "value": "{temp_celsius} °C"
+                    },
+                    {
+                        "name": "Fahrenheit:",
+                        "value": "{temp_fahrenheit} °F"
+                    },
+                    {
+                        "name": "Kelvin:",
+                        "value": "{temp_kelvin} K"
+                    },
+                    {
+                        "name": "Rankine:",
+                        "value": "{temp_rankine} °R"
+                    }
+                ],
+                "footer": {
+                    "text": "Velg: {temperature_unit_value}"
+                }
+            }
+        ],
+        "translator_id": "554107005824925707"
+    },
+    "convert_speed": {
+        "name": "konverter_hastighet",
+        "description": "En kommando for å konvertere hastigheter til forskjellige skalaer",
+        "options": {
+            "speed_unit": {
+                "name": "speed_unit",
+                "description": "Velg en hastighets-enhet fra rullegardinmenyen.",
+                "choices": [
+                    "Miles",
+                    "Kilometer",
+                    "Meter",
+                    "Fot",
+                    "Megameter",
+                    "Konstanter (Lysets hastighet)"
+                ]
+            },
+            "speed": {
+                "name": "speed",
+                "description": "Vennligst skriv inn et tall"
+            }
+        },
+        "embeds": [
+            {
+                "title": "Hastighet:",
+                "fields": [
+                    {
+                        "name": "Miles:",
+                        "value": "{speeds_miles} mi"
+                    },
+                    {
+                        "name": "Kilometer:",
+                        "value": "{speeds_kilometers} km"
+                    },
+                    {
+                        "name": "Meter:",
+                        "value": "{speeds_meters} m"
+                    },
+                    {
+                        "name": "Fot:",
+                        "value": "{speeds_feet} ft"
+                    },
+                    {
+                        "name": "Megameter:",
+                        "value": "{speeds_megameters} Mm"
+                    },
+                    {
+                        "name": "Konstanter (Lysets hastighet):",
+                        "value": "{speeds_light} C"
+                    }
+                ],
+                "footer": {
+                    "text": "Velg: {speed_unit_value}"
+                }
+            }
+        ],
+        "translator_id": "554107005824925707"
+    }
+}

@@ -1,0 +1,106 @@
+{
+    "convert_temperature": {
+        "name": "μετατροπή_θερμοκρασίας",
+        "description": "Εντολή που μετατρέπει την θερμοκρασία σε διαφορετικές μονάδες μέτρησης",
+        "options": {
+            "temperature_unit": {
+                "name": "μονάδα_μέτρησης_θερμοκρασίας",
+                "description": "Επιλέξτε μία μονάδα μέτρησης της θερμοκρασίας από το αναπτυσσόμενο μενού.",
+                "choices": [
+                    "Κελσίου",
+                    "Φαρενάιτ",
+                    "Κέλβιν",
+                    "Ράνκιν"
+                ]
+            },
+            "temperature": {
+                "name": "θερμοκρασία",
+                "description": "Εισάγετε έναν αριθμό"
+            }
+        },
+        "embeds": [
+            {
+                "title": "Θερμοκρασία:",
+                "fields": [
+                    {
+                        "name": "Κελσίου:",
+                        "value": "{temp_celsius} °C"
+                    },
+                    {
+                        "name": "Φαρενάιτ:",
+                        "value": "{temp_fahrenheit} °F"
+                    },
+                    {
+                        "name": "Κέλβιν:",
+                        "value": "{temp_kelvin} K"
+                    },
+                    {
+                        "name": "Ράνκιν:",
+                        "value": "{temp_rankine} °R"
+                    }
+                ],
+                "footer": {
+                    "text": "Επιλογές: {temperature_unit_value}"
+                }
+            }
+        ],
+        "translator_id": "189036489265381387"
+    },
+    "convert_speed": {
+        "name": "μετατροπή_ταχύτητας",
+        "description": "Εντολή που μετατρέπει την ταχύτητα σε διαφορετικές μονάδες μέτρησης",
+        "options": {
+            "speed_unit": {
+                "name": "μονάδα_μέτρησης_ταχύτητας",
+                "description": "Επιλέξτε μια μονάδα μέτρησης ταχύτητας από το αναπτυσσόμενο μενού.",
+                "choices": [
+                    "Μίλια",
+                    "Χιλιόμετρα",
+                    "Μέτρα",
+                    "Πόδια",
+                    "Μεγαμέτρα",
+                    "Σταθερές (Ταχύτητα του φωτός)"
+                ]
+            },
+            "speed": {
+                "name": "ταχύτητα",
+                "description": "Εισάγετε έναν αριθμό"
+            }
+        },
+        "embeds": [
+            {
+                "title": "Ταχύτητα:",
+                "fields": [
+                    {
+                        "name": "Μίλια:",
+                        "value": "{speeds_miles} mi"
+                    },
+                    {
+                        "name": "Χιλιόμετρα:",
+                        "value": "{speeds_kilometers} χμ"
+                    },
+                    {
+                        "name": "Μέτρα:",
+                        "value": "{speeds_meters} μ"
+                    },
+                    {
+                        "name": "Πόδια:",
+                        "value": "{speeds_feet} ft"
+                    },
+                    {
+                        "name": "Μεγαμέτρα:",
+                        "value": "{speeds_megameters} Mμ"
+                    },
+                    {
+                        "name": "Σταθερές (Ταχύτητα του φωτός):",
+                        "value": "{speeds_light} C"
+                    }
+                ],
+                "footer": {
+                    "text": "Επιλέξτε: {speed_unit_value}"
+                }
+            }
+        ],
+        "translator_id": "189036489265381387"
+    }
+}
