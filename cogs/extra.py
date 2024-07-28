@@ -104,7 +104,9 @@ class Extra(commands.Cog):
         speed_unit="Select a Unit of Speed from the dropdown.",
         speed="Please enter a number",
     )
-    @app_commands.command(description="A command to convert speeds to different scales")
+    @app_commands.command(description="A command to convert speeds to different scales",
+        auto_locale_strings=True,
+    )
     @app_commands.choices(
         speed_unit=locale_choices(
             Speed,
