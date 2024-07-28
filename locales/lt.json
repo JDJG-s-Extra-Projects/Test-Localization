@@ -45,5 +45,62 @@
             }
         ],
         "translator_id": "673129564511273000"
+    },
+    "convert_speed": {
+        "name": "paversti_greitį",
+        "description": "Komanda paversti greitį į skirtingas skales",
+        "options": {
+            "speed_unit": {
+                "name": "greičio_vienetas",
+                "description": "Pasirinkite greičio vienetą iš išskleidžiamos meniu.",
+                "choices": [
+                    "Mylios",
+                    "Kilometrai",
+                    "Metrai",
+                    "Pėdos",
+                    "MegaMetrai",
+                    "Konstantos (Šviesos greitis)"
+                ]
+            },
+            "speed": {
+                "name": "greitis",
+                "description": "Įveskite skaičių"
+            }
+        },
+        "embeds": [
+            {
+                "title": "Greitis:",
+                "fields": [
+                    {
+                        "name": "Mylios:",
+                        "value": "{speeds_miles} mi"
+                    },
+                    {
+                        "name": "Kilometrai:",
+                        "value": "{speeds_kilometers} km"
+                    },
+                    {
+                        "name": "Metrai:",
+                        "value": "{speeds_meters} m"
+                    },
+                    {
+                        "name": "Pėdos:",
+                        "value": "{speeds_feet} ft"
+                    },
+                    {
+                        "name": "MegaMetrai",
+                        "value": "{speeds_megameters} Mm"
+                    },
+                    {
+                        "name": "Konstantos (Šviesos greitis):",
+                        "value": "{speeds_light} C"
+                    }
+                ],
+                "footer": {
+                    "text": "Pasirinkite: {speed_unit_value}"
+                }
+            }
+        ],
+        "translator_id": "673129564511273000"
     }
 }

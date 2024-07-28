@@ -45,5 +45,62 @@
             }
         ],
         "translator_id": "351656397257310212"
+    },
+    "convert_speed": {
+        "name": "uzunluk_dönüştür",
+        "description": "Uzunuluk birimler arasında değişim yapabilen komut",
+        "options": {
+            "speed_unit": {
+                "name": "uzunluk_birimi",
+                "description": "Uzunluk birimi seçin",
+                "choices": [
+                    "Mil",
+                    "Kilometre",
+                    "Metre",
+                    "Fit",
+                    "Megametre",
+                    "Işık Hızı"
+                ]
+            },
+            "speed": {
+                "name": "uzunuluk",
+                "description": "Uzunluk girin"
+            }
+        },
+        "embeds": [
+            {
+                "title": "Uzunluk:",
+                "fields": [
+                    {
+                        "name": "Mil:",
+                        "value": "{speeds_miles} mi"
+                    },
+                    {
+                        "name": "Kilometre:",
+                        "value": "{speeds_kilometers} km"
+                    },
+                    {
+                        "name": "Metre:",
+                        "value": "{speeds_meters} m"
+                    },
+                    {
+                        "name": "Fit:",
+                        "value": "{speeds_feet} ft"
+                    },
+                    {
+                        "name": "Megametre",
+                        "value": "{speeds_megameters} Mm"
+                    },
+                    {
+                        "name": "Işık Hızı",
+                        "value": "{speeds_light} C"
+                    }
+                ],
+                "footer": {
+                    "text": "Seçilen birim: {speed_unit_value}"
+                }
+            }
+        ],
+        "translator_id": "351656397257310212"
     }
 }

@@ -45,5 +45,62 @@
             }
         ],
         "translator_id": "622098032854433813"
+    },
+    "convert_speed": {
+        "name": "속도_변환",
+        "description": "특정 단위의 속도를 다른 속도 단위들로 변환시켜 줍니다.",
+        "options": {
+            "speed_unit": {
+                "name": "변환할_속도",
+                "description": "다른 속도 단위로 변환시킬 속도 단위를 선택합니다.",
+                "choices": [
+                    "마일",
+                    "킬로미터",
+                    "미터",
+                    "피트",
+                    "메가미터",
+                    "상수 (빛의 속도)"
+                ]
+            },
+            "speed": {
+                "name": "속도",
+                "description": "단위를 제외한 속도(숫자)를 입력해 주세요."
+            }
+        },
+        "embeds": [
+            {
+                "title": "속도 변환됨",
+                "fields": [
+                    {
+                        "name": "마일",
+                        "value": "{speeds_miles} mi"
+                    },
+                    {
+                        "name": "킬로미터",
+                        "value": "{speeds_kilometers} km"
+                    },
+                    {
+                        "name": "미터",
+                        "value": "{speeds_meters} m"
+                    },
+                    {
+                        "name": "피트",
+                        "value": "{speeds_feet} ft"
+                    },
+                    {
+                        "name": "메가미터",
+                        "value": "{speeds_megameters} Mm"
+                    },
+                    {
+                        "name": "상수 (빛의 속도)",
+                        "value": "{speeds_light} C"
+                    }
+                ],
+                "footer": {
+                    "text": "선택한 온도: {speed_unit_value}"
+                }
+            }
+        ],
+        "translator_id": "622098032854433813"
     }
 }
