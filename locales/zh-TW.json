@@ -1,16 +1,16 @@
 {
     "convert_temperature": {
         "name": "轉換溫度",
-        "description": "一個可以轉換溫度至不同溫標的指令",
+        "description": "一個轉換溫度到不同溫度單位的指令",
         "options": {
             "temperature_unit": {
-                "name": "溫標單位",
-                "description": "請選擇以下一種溫標單位",
+                "name": "溫度單位",
+                "description": "請選擇以下一種溫度單位",
                 "choices": [
-                    "攝氏度",
-                    "華氏度",
-                    "開爾文",
-                    "蘭氏溫標"
+                    "攝氏度：",
+                    "華氏度：",
+                    "克耳文：",
+                    "蘭氏度："
                 ]
             },
             "temperature": {
@@ -20,22 +20,22 @@
         },
         "embeds": [
             {
-                "title": "溫度：",
+                "title": "溫度：:",
                 "fields": [
                     {
-                        "name": "攝氏度:",
+                        "name": "攝氏度：",
                         "value": "{temp_celsius} °C"
                     },
                     {
-                        "name": "華氏度:",
+                        "name": "華氏度：",
                         "value": "{temp_fahrenheit} °F"
                     },
                     {
-                        "name": "開爾文:",
+                        "name": "克耳文：",
                         "value": "{temp_kelvin} K"
                     },
                     {
-                        "name": "蘭氏溫標:",
+                        "name": "蘭氏度：",
                         "value": "{temp_rankine} °R"
                     }
                 ],
@@ -44,6 +44,6 @@
                 }
             }
         ],
-        "translator_id": "869928921574035486"
+        "translator_id": "1130334020740321431"
     }
 }
