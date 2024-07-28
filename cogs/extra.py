@@ -165,7 +165,7 @@ class Extra(commands.Cog):
         speeds_kilometers = f"{speeds.kilometers:,}"
         speeds_meters = f"{speeds.meters:,}"
         speeds_feet = f"{speeds.feet:,}"
-        speed_megameters = f"{speeds.megameters:,}"
+        speeds_megameters = f"{speeds.megameters:,}"
         speeds_light = f"{speeds.light:,}"
 
         speed_unit_value = (
@@ -180,7 +180,7 @@ class Extra(commands.Cog):
         embed.add_field(name="Kilometers:", value= f"{speeds_kilometers} km")
         embed.add_field(name="Meters:", value=f"{speeds_meters} m")
         embed.add_field(name="Feet", value=f"{speeds_feet} ft")
-        embed.add_field(name="Megameters", value=f"{speed_megameters} Mm")
+        embed.add_field(name="Megameters", value=f"{speeds_megameters} Mm")
         embed.add_field(name="Constants (Speed of Light):", value=f"{speeds_light} C")
 
         # megameters and light speed are elite dangerous references
@@ -191,11 +191,11 @@ class Extra(commands.Cog):
         embeds = await self.bot.tree.translator.translate_embeds(
             interaction,
             [embed],
-            speed_miles=speed_miles,
+            speeds_miles=speeds_miles,
             speeds_kilometers=speeds_kilometers,
             speeds_meters=speeds_meters,
             speeds_feet=speeds_feet,
-            speed_megameters=speed_megameters,
+            speeds_megameters=speeds_megameters,
             speeds_light=speeds_light,
             speed_unit_value=speed_unit_value,
         )
