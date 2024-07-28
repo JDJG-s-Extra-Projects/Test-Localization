@@ -47,7 +47,7 @@
         "translator_id": "396290259907903491"
     },
     "convert_speed": {
-        "name": "Muunnanopeus",
+        "name": "muunnanopeus",
         "description": "Komento nopeuden muuntamiseen eri asteikoille.",
         "options": {
             "speed_unit": {
@@ -63,7 +63,7 @@
                 ]
             },
             "speed": {
-                "name": "Nopeus",
+                "name": "nopeus",
                 "description": "Syötä numero."
             }
         },
