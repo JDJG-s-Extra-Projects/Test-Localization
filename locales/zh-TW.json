@@ -7,10 +7,10 @@
                 "name": "溫度單位",
                 "description": "請選擇以下一種溫度單位",
                 "choices": [
-                    "攝氏度：",
-                    "華氏度：",
-                    "克耳文：",
-                    "蘭氏度："
+                    "攝氏度",
+                    "華氏度",
+                    "克耳文",
+                    "蘭氏度"
                 ]
             },
             "temperature": {
@@ -20,27 +20,27 @@
         },
         "embeds": [
             {
-                "title": "溫度：:",
+                "title": "溫度：",
                 "fields": [
                     {
-                        "name": "攝氏度：",
+                        "name": "攝氏度",
                         "value": "{temp_celsius} °C"
                     },
                     {
-                        "name": "華氏度：",
+                        "name": "華氏度",
                         "value": "{temp_fahrenheit} °F"
                     },
                     {
-                        "name": "克耳文：",
+                        "name": "克耳文",
                         "value": "{temp_kelvin} K"
                     },
                     {
-                        "name": "蘭氏度：",
+                        "name": "蘭氏度",
                         "value": "{temp_rankine} °R"
                     }
                 ],
                 "footer": {
-                    "text": "請選擇： {temperature_unit_value}"
+                    "text": "選擇： {temperature_unit_value}"
                 }
             }
         ],
