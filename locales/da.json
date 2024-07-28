@@ -51,7 +51,7 @@
         "description": "En command til at konvetere hastigheder til forskellige enheder",
         "options": {
             "speed_unit": {
-                "name": "Hastigheds_enhed",
+                "name": "hastigheds_enhed",
                 "description": "Vælg en enhed af hastigheder fra rullemenuen.",
                 "choices": [
                     "Miles",
