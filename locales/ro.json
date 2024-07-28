@@ -45,5 +45,62 @@
             }
         ],
         "translator_id": "177494227918389249"
+    },
+    "convert_speed": {
+        "name": "convertiți_viteza",
+        "description": "O comandă pentru a converti vitezele în diferite scări",
+        "options": {
+            "speed_unit": {
+                "name": "unitate_de_viteză",
+                "description": "Selectați o unitate de viteză din lista derulantă.",
+                "choices": [
+                    "Mile",
+                    "Kilometri",
+                    "Metri",
+                    "feet",
+                    "MegaMetri",
+                    "Viteza luminii"
+                ]
+            },
+            "speed": {
+                "name": "viteză",
+                "description": "Vă rugăm să introduceți un număr"
+            }
+        },
+        "embeds": [
+            {
+                "title": "Viteză:",
+                "fields": [
+                    {
+                        "name": "Mile:",
+                        "value": "{speeds_miles} mi"
+                    },
+                    {
+                        "name": "Kilometri:",
+                        "value": "{speeds_kilometers} km"
+                    },
+                    {
+                        "name": "Metri:",
+                        "value": "{speeds_meters} m"
+                    },
+                    {
+                        "name": "feet:",
+                        "value": "{speeds_feet} ft"
+                    },
+                    {
+                        "name": "MegaMetri:",
+                        "value": "{speeds_megameters} Mm"
+                    },
+                    {
+                        "name": "Viteza luminii:",
+                        "value": "{speeds_light} C"
+                    }
+                ],
+                "footer": {
+                    "text": "Alege: {speed_unit_value}"
+                }
+            }
+        ],
+        "translator_id": "177494227918389249"
     }
 }
