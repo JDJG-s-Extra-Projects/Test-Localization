@@ -45,5 +45,62 @@
             }
         ],
         "translator_id": "1022842005920940063"
+    },
+    "convert_speed": {
+        "name": "vitesse_convertir",
+        "description": "Une commande pour convertir la vitesse en différentes échelles",
+        "options": {
+            "speed_unit": {
+                "name": "unité_de_vitesse",
+                "description": "Sélectionner une unité de vitesse dans la liste",
+                "choices": [
+                    "Milles",
+                    "Kilomètres",
+                    "Mètres",
+                    "Pieds",
+                    "Mégamètres",
+                    "Constantes (vitesse de la lumière)"
+                ]
+            },
+            "speed": {
+                "name": "vitesse",
+                "description": "Veuillez saisir un numéro"
+            }
+        },
+        "embeds": [
+            {
+                "title": "Vitesse:",
+                "fields": [
+                    {
+                        "name": "Milles:",
+                        "value": "{speeds_miles} mi"
+                    },
+                    {
+                        "name": "Kilomètres:",
+                        "value": "{speeds_kilometers} km"
+                    },
+                    {
+                        "name": "Mètres:",
+                        "value": "{speeds_meters} m"
+                    },
+                    {
+                        "name": "Pieds:",
+                        "value": "{speeds_feet} ft"
+                    },
+                    {
+                        "name": "Mégamètres",
+                        "value": "{speeds_megameters} Mm"
+                    },
+                    {
+                        "name": "Constantes (vitesse de la lumière):",
+                        "value": "{speeds_light} C"
+                    }
+                ],
+                "footer": {
+                    "text": "Choisi: {speed_unit_value}"
+                }
+            }
+        ],
+        "translator_id": "1022842005920940063"
     }
 }
