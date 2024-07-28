@@ -1,6 +1,6 @@
 {
     "convert_temperature": {
-        "name": "конвертация_температуры",
+        "name": "конвертация_температур",
         "description": "Перевод температуры в разные единицы",
         "options": {
             "temperature_unit": {
