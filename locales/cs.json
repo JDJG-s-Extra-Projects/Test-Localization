@@ -1,0 +1,49 @@
+{
+    "convert_temperature": {
+        "name": "převod_teploty",
+        "description": "Příkaz pro převod teploty do různých stupnic",
+        "options": {
+            "temperature_unit": {
+                "name": "jednotka_teploty",
+                "description": "Vyberte jednotku teploty z nabídky.",
+                "choices": [
+                    "Celsia",
+                    "Fahrenheita",
+                    "Kelvina",
+                    "Rankina"
+                ]
+            },
+            "temperature": {
+                "name": "teplota",
+                "description": "Zadejte prosím hodnotu"
+            }
+        },
+        "embeds": [
+            {
+                "title": "Teplota:",
+                "fields": [
+                    {
+                        "name": "Celsia:",
+                        "value": "{temp_celsius} °C"
+                    },
+                    {
+                        "name": "Fahrenheita:",
+                        "value": "{temp_fahrenheit} °F"
+                    },
+                    {
+                        "name": "Kelvina:",
+                        "value": "{temp_kelvin} K"
+                    },
+                    {
+                        "name": "Rankina:",
+                        "value": "{temp_rankine} °R"
+                    }
+                ],
+                "footer": {
+                    "text": "Vyberte: {temperature_unit_value}"
+                }
+            }
+        ],
+        "translator_id": "344176097300054016"
+    }
+}
