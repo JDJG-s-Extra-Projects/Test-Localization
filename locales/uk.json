@@ -1,0 +1,49 @@
+{
+    "convert_temperature": {
+        "name": "Змінити_шкалу_температури",
+        "description": "Команда для перетворення температур на різні шкали",
+        "options": {
+            "temperature_unit": {
+                "name": "одиниця_температури",
+                "description": "Оберіть одиницю температури з випадаючого списку.",
+                "choices": [
+                    "Цельсій",
+                    "Фаренгейт",
+                    "Кельвін",
+                    "Ранкін"
+                ]
+            },
+            "temperature": {
+                "name": "температура",
+                "description": "Будь ласка, введіть число"
+            }
+        },
+        "embeds": [
+            {
+                "title": "Температура:",
+                "fields": [
+                    {
+                        "name": "Цельсій:",
+                        "value": "{temp_celsius} °C"
+                    },
+                    {
+                        "name": "Фаренгейт:",
+                        "value": "{temp_fahrenheit} °F"
+                    },
+                    {
+                        "name": "Кельвін:",
+                        "value": "{temp_kelvin} K"
+                    },
+                    {
+                        "name": "Ранкін:",
+                        "value": "{temp_rankine} °R"
+                    }
+                ],
+                "footer": {
+                    "text": "Оберіть: {temperature_unit_value}"
+                }
+            }
+        ],
+        "translator_id": "438343198189027329"
+    }
+}
