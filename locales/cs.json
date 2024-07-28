@@ -45,5 +45,62 @@
             }
         ],
         "translator_id": "344176097300054016"
+    },
+    "convert_speed": {
+        "name": "převod_rychlosti",
+        "description": "Příkaz pro převod rychlosti do různých stupnic",
+        "options": {
+            "speed_unit": {
+                "name": "rychlostní_jednotka",
+                "description": "Vyberte jednotku rychlosti z nabídky.",
+                "choices": [
+                    "Míle",
+                    "Kilometry",
+                    "Metry",
+                    "Stopy",
+                    "Megametry",
+                    "Konstanty (Rychlost světla)"
+                ]
+            },
+            "speed": {
+                "name": "rychlost",
+                "description": "Zadejte prosím hodnotu"
+            }
+        },
+        "embeds": [
+            {
+                "title": "Rychlost:",
+                "fields": [
+                    {
+                        "name": "Míle:",
+                        "value": "{speeds_miles} mi"
+                    },
+                    {
+                        "name": "Kilometry:",
+                        "value": "{speeds_kilometers} km"
+                    },
+                    {
+                        "name": "Metry:",
+                        "value": "{speeds_meters} m"
+                    },
+                    {
+                        "name": "Stopy:",
+                        "value": "{speeds_feet} ft"
+                    },
+                    {
+                        "name": "Megametry",
+                        "value": "{speeds_megameters} Mm"
+                    },
+                    {
+                        "name": "Konstanty (Rychlost světla):",
+                        "value": "{speeds_light} C"
+                    }
+                ],
+                "footer": {
+                    "text": "Vyberte: {speed_unit_value}"
+                }
+            }
+        ],
+        "translator_id": "344176097300054016"
     }
 }
