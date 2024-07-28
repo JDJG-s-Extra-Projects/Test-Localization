@@ -1,0 +1,106 @@
+{
+    "convert_temperature": {
+        "name": "konveter_temperatur",
+        "description": "En command til at konvetere temperaturer til forskellige enheder",
+        "options": {
+            "temperature_unit": {
+                "name": "temperatur_enhed",
+                "description": "Vælg en enhed af temperature fra rullemenuen.",
+                "choices": [
+                    "Celsius",
+                    "Fahrenheit",
+                    "Kelvin",
+                    "Rankine"
+                ]
+            },
+            "temperature": {
+                "name": "temperatur",
+                "description": "Skriv et nummer"
+            }
+        },
+        "embeds": [
+            {
+                "title": "Temperatur:",
+                "fields": [
+                    {
+                        "name": "Celsius:",
+                        "value": "{temp_celsius} °C"
+                    },
+                    {
+                        "name": "Fahrenheit:",
+                        "value": "{temp_fahrenheit} °F"
+                    },
+                    {
+                        "name": "Kelvin:",
+                        "value": "{temp_kelvin} K"
+                    },
+                    {
+                        "name": "Rankine:",
+                        "value": "{temp_rankine} °R"
+                    }
+                ],
+                "footer": {
+                    "text": "Vælg: {temperature_unit_value}"
+                }
+            }
+        ],
+        "translator_id": "844466398540333056"
+    },
+    "convert_speed": {
+        "name": "konveter_hastighed",
+        "description": "En command til at konvetere hastigheder til forskellige enheder",
+        "options": {
+            "speed_unit": {
+                "name": "Hastigheds_enhed",
+                "description": "Vælg en enhed af hastigheder fra rullemenuen.",
+                "choices": [
+                    "Miles",
+                    "Kilometer",
+                    "Meter",
+                    "Feet",
+                    "Megameter",
+                    "Konstanter (Lysets Hastighed)"
+                ]
+            },
+            "speed": {
+                "name": "hastighed",
+                "description": "Skriv et nummer"
+            }
+        },
+        "embeds": [
+            {
+                "title": "Hastighed:",
+                "fields": [
+                    {
+                        "name": "Miles:",
+                        "value": "{speeds_miles} mi"
+                    },
+                    {
+                        "name": "Kilometer:",
+                        "value": "{speeds_kilometers} km"
+                    },
+                    {
+                        "name": "Meter:",
+                        "value": "{speeds_meters} m"
+                    },
+                    {
+                        "name": "Feet:",
+                        "value": "{speeds_feet} ft"
+                    },
+                    {
+                        "name": "Megameter:",
+                        "value": "{speeds_megameters} Mm"
+                    },
+                    {
+                        "name": "Konstanter (Lysets Hastighed):",
+                        "value": "{speeds_light} K"
+                    }
+                ],
+                "footer": {
+                    "text": "Vælg: {speed_unit_value}"
+                }
+            }
+        ],
+        "translator_id": "844466398540333056"
+    }
+}
