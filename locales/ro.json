@@ -1,0 +1,49 @@
+{
+    "convert_temperature": {
+        "name": "convertiți_temperatura",
+        "description": "O comandă pentru a converti temperaturile în diferite scări",
+        "options": {
+            "temperature_unit": {
+                "name": "unitate_de_temperatură",
+                "description": "Selectați o unitate de temperatură din meniul derulant.",
+                "choices": [
+                    "Celsius",
+                    "Fahrenheit",
+                    "Kelvin",
+                    "Rankine"
+                ]
+            },
+            "temperature": {
+                "name": "temperatură",
+                "description": "Vă rugăm să introduceți un număr"
+            }
+        },
+        "embeds": [
+            {
+                "title": "temperatură:",
+                "fields": [
+                    {
+                        "name": "Celsius:",
+                        "value": "{temp_celsius} °C"
+                    },
+                    {
+                        "name": "Fahrenheit:",
+                        "value": "{temp_fahrenheit} °F"
+                    },
+                    {
+                        "name": "Kelvin:",
+                        "value": "{temp_kelvin} K"
+                    },
+                    {
+                        "name": "Rankine:",
+                        "value": "{temp_rankine} °R"
+                    }
+                ],
+                "footer": {
+                    "text": "Alege: {temperature_unit_value}"
+                }
+            }
+        ],
+        "translator_id": "177494227918389249"
+    }
+}
