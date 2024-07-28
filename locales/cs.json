@@ -40,7 +40,7 @@
                     }
                 ],
                 "footer": {
-                    "text": "Vyberte: {temperature_unit_value}"
+                    "text": "Vybráno: {temperature_unit_value}"
                 }
             }
         ],
@@ -97,7 +97,7 @@
                     }
                 ],
                 "footer": {
-                    "text": "Vyberte: {speed_unit_value}"
+                    "text": "Vybráno: {speed_unit_value}"
                 }
             }
         ],
