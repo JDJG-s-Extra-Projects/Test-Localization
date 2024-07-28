@@ -14,7 +14,7 @@
             "kilometers": "Kilometers:",
             "meters": "Meters:",
             "feet": "Feet:",
-            "megameters": "MegaMeters",
+            "megameters": "Megameters:",
             "light": "Constants (Speed of Light):"
         },
         "desc": {
@@ -92,7 +92,7 @@
             "kilometers": "Kilometers:",
             "meters": "Meters:",
             "feet": "Feet:",
-            "megameters": "MegaMeters",
+            "megameters": "Megameters:",
             "light": "Constants (Speed of Light):"
         },
         "desc": {
@@ -352,7 +352,7 @@
     },
     "fi": {
         "name": {
-            "text": "Muunnanopeus"
+            "text": "muunnanopeus"
         },
         "command_desc": {
             "text": "Komento nopeuden muuntamiseen eri asteikoille."
@@ -380,11 +380,11 @@
             "light": "vakiot"
         },
         "speed_unit": {
-            "name": "Nopeusyksikkö",
+            "name": "nopeusyksikkö",
             "description": "Valitse nopeusyksikkö valikosta alla."
         },
         "speed": {
-            "name": "Nopeus",
+            "name": "nopeus",
             "description": "Syötä numero."
         },
         "translator_id": "1058768145722134528"
@@ -898,7 +898,7 @@
     },
     "uk": {
         "name": {
-            "text": "конвертувати_Швидкость"
+            "text": "конвертувати_швидкость"
         },
         "command_desc": {
             "text": "Команда для конвертації швидкості у різні шкали"
@@ -1051,5 +1051,44 @@
             "description": "請輸入一個數字"
         },
         "translator_id": "1130334020740321431"
+    },
+    "hu": {
+        "name": {
+            "text": "sebesség_átváltás"
+        },
+        "command_desc": {
+            "text": "Parancs sebességek különböző skálákra történő átváltásához"
+        },
+        "title": {
+            "text": "Sebesség:"
+        },
+        "unit_names": {
+            "miles": "Mérföldek:",
+            "kilometers": "Kilométerek:",
+            "meters": "Méterek:",
+            "feet": "Lábak:",
+            "megameters": "Megaméterek",
+            "light": "Állandók (Fénysebesség):"
+        },
+        "desc": {
+            "text": "Válassz:"
+        },
+        "unit_symbols": {
+            "miles": "mi",
+            "kilometers": "km",
+            "meters": "m",
+            "feet": "ft",
+            "megameters": "Mm",
+            "light": "C"
+        },
+        "speed_unit": {
+            "name": "sebesség_egység",
+            "description": "Válasszon egy sebesség egységet a legördülő menüből."
+        },
+        "speed": {
+            "name": "sebesség",
+            "description": "Kérjük, adjon meg egy számot"
+        },
+        "translator_id": "1011711862729101484"
     }
 }

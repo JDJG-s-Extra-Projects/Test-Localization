@@ -1,0 +1,106 @@
+{
+    "convert_temperature": {
+        "name": "hőmérséklet_átalakítás",
+        "description": "Egy parancs, amely a hőmérsékletek különböző skálákra történő átalakítására szolgál",
+        "options": {
+            "temperature_unit": {
+                "name": "hőmérsékleti_egység",
+                "description": "Válassz egy hőmérsékleti egységet a legördülő menüből.",
+                "choices": [
+                    "Celsius",
+                    "Fahrenheit",
+                    "Kelvin",
+                    "Rankine"
+                ]
+            },
+            "temperature": {
+                "name": "hőmérséklet",
+                "description": "Kérlek, adj meg egy számot"
+            }
+        },
+        "embeds": [
+            {
+                "title": "Hőmérséklet:",
+                "fields": [
+                    {
+                        "name": "Celsius:",
+                        "value": "{temp_celsius} °C"
+                    },
+                    {
+                        "name": "Fahrenheit:",
+                        "value": "{temp_fahrenheit} °F"
+                    },
+                    {
+                        "name": "Kelvin:",
+                        "value": "{temp_kelvin} K"
+                    },
+                    {
+                        "name": "Rankine:",
+                        "value": "{temp_rankine} °R"
+                    }
+                ],
+                "footer": {
+                    "text": "Válassz: {temperature_unit_value}"
+                }
+            }
+        ],
+        "translator_id": "1011711862729101484"
+    },
+    "convert_speed": {
+        "name": "sebesség_átváltás",
+        "description": "Parancs sebességek különböző skálákra történő átváltásához",
+        "options": {
+            "speed_unit": {
+                "name": "sebesség_egység",
+                "description": "Válasszon egy sebesség egységet a legördülő menüből.",
+                "choices": [
+                    "Mérföldek",
+                    "Kilométerek",
+                    "Méterek",
+                    "Lábak",
+                    "Megaméterek",
+                    "Állandók (Fénysebesség)"
+                ]
+            },
+            "speed": {
+                "name": "sebesség",
+                "description": "Kérjük, adjon meg egy számot"
+            }
+        },
+        "embeds": [
+            {
+                "title": "Sebesség:",
+                "fields": [
+                    {
+                        "name": "Mérföldek:",
+                        "value": "{speeds_miles} mi"
+                    },
+                    {
+                        "name": "Kilométerek:",
+                        "value": "{speeds_kilometers} km"
+                    },
+                    {
+                        "name": "Méterek:",
+                        "value": "{speeds_meters} m"
+                    },
+                    {
+                        "name": "Lábak:",
+                        "value": "{speeds_feet} ft"
+                    },
+                    {
+                        "name": "Megaméterek",
+                        "value": "{speeds_megameters} Mm"
+                    },
+                    {
+                        "name": "Állandók (Fénysebesség):",
+                        "value": "{speeds_light} C"
+                    }
+                ],
+                "footer": {
+                    "text": "Válassz: {speed_unit_value}"
+                }
+            }
+        ],
+        "translator_id": "1011711862729101484"
+    }
+}
