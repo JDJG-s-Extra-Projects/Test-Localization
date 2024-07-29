@@ -5,13 +5,13 @@ import traceback
 import typing
 import zoneinfo
 
-from babel.numbers import format_decimal
 import discord
+from babel.numbers import format_decimal
 from discord import app_commands
 from discord.app_commands import Choice
 from discord.ext import commands
 
-from local_utils import Speed, Temperature, locale_choices, get_locale_timezones
+from local_utils import Speed, Temperature, get_locale_timezones, locale_choices
 from utils import fuzzy
 
 if typing.TYPE_CHECKING:
