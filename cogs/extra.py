@@ -7,6 +7,7 @@ import zoneinfo
 
 import discord
 from discord import app_commands
+from discord.app_commands import Choice
 from discord.ext import commands
 
 from local_utils import Speed, Temperature, locale_choices
