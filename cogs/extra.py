@@ -20,6 +20,9 @@ class Extra(commands.Cog):
 
     def __init__(self, bot: JDBot):
         self.bot: JDBot = bot
+    
+    async def cog_load(self):
+        self.available_timezones = sorted(list(await asyncio.to_thread(zoneinfo.available_timezones)))
 
     @app_commands.command(
         description="A command to convert temperatures to different scales",
