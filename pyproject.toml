@@ -10,3 +10,4 @@ python = ">=3.11.0,<4.0"
 discord-py = {git="https://github.com/Rapptz/discord.py.git", extras = ["speed", "voice"]}
 python-dotenv = ">=1.0.1"
 jishaku = {git = "https://github.com/Gorialis/jishaku.git"}
+babel = ">=2.15.0"
