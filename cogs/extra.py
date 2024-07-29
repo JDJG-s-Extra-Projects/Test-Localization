@@ -222,6 +222,7 @@ class Extra(commands.Cog):
     async def convert_timezone(self, interaction: discord.Interaction, timezone: typing.Optional[str] = None):
 
         timezones = self.available_timezones
+        # no json format exists for this yet.
 
         if not timezone:
             timestamp = discord.utils.format_dt(interaction.created_at)
