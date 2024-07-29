@@ -106,7 +106,8 @@ class Extra(commands.Cog):
         speed_unit="Select a Unit of Speed from the dropdown.",
         speed="Please enter a number",
     )
-    @app_commands.command(description="A command to convert speeds to different scales",
+    @app_commands.command(
+        description="A command to convert speeds to different scales",
         auto_locale_strings=True,
     )
     @app_commands.choices(
@@ -180,8 +181,8 @@ class Extra(commands.Cog):
         )
 
         embed = discord.Embed(title="Speed:", color=color)
-        embed.add_field(name="Miles:", value= f"{speeds_miles} mi")
-        embed.add_field(name="Kilometers:", value= f"{speeds_kilometers} km")
+        embed.add_field(name="Miles:", value=f"{speeds_miles} mi")
+        embed.add_field(name="Kilometers:", value=f"{speeds_kilometers} km")
         embed.add_field(name="Meters:", value=f"{speeds_meters} m")
         embed.add_field(name="Feet", value=f"{speeds_feet} ft")
         embed.add_field(name="Megameters", value=f"{speeds_megameters} Mm")
