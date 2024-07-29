@@ -1,0 +1,106 @@
+{
+    "convert_temperature": {
+        "name": "преобразуване_на_температура",
+        "description": "Команда за преобразуване на температури в други мерни единици",
+        "options": {
+            "temperature_unit": {
+                "name": "температура_мерна_единица",
+                "description": "Изберете мерна единица за температура от падащото меню.",
+                "choices": [
+                    "Целзий",
+                    "Фаренхайт",
+                    "Келвин",
+                    "Ранкин"
+                ]
+            },
+            "temperature": {
+                "name": "температура",
+                "description": "Моля въведете число"
+            }
+        },
+        "embeds": [
+            {
+                "title": "Температура:",
+                "fields": [
+                    {
+                        "name": "Целзий:",
+                        "value": "{temp_celsius} °C"
+                    },
+                    {
+                        "name": "Фаренхайт:",
+                        "value": "{temp_fahrenheit} °F"
+                    },
+                    {
+                        "name": "Келвин:",
+                        "value": "{temp_kelvin} K"
+                    },
+                    {
+                        "name": "Ранкин:",
+                        "value": "{temp_rankine} °R"
+                    }
+                ],
+                "footer": {
+                    "text": "Избрано: {temperature_unit_value}"
+                }
+            }
+        ],
+        "translator_id": "236831708354314240"
+    },
+    "convert_speed": {
+        "name": "преобразуване_на_скорост",
+        "description": "Команда за преобразуване на скорости в други мерни единици",
+        "options": {
+            "speed_unit": {
+                "name": "скорост_мерна_единица",
+                "description": "Изберете мерна единица за скорост от падащото меню.",
+                "choices": [
+                    "Мили",
+                    "Километри",
+                    "Метри",
+                    "Футове",
+                    "Мегаметри",
+                    "Константи (скорост на светлината)"
+                ]
+            },
+            "speed": {
+                "name": "скорост",
+                "description": "Моля въведете число"
+            }
+        },
+        "embeds": [
+            {
+                "title": "Скорост:",
+                "fields": [
+                    {
+                        "name": "Мили:",
+                        "value": "{speeds_miles} mi"
+                    },
+                    {
+                        "name": "Километри:",
+                        "value": "{speeds_kilometers} km"
+                    },
+                    {
+                        "name": "Метри:",
+                        "value": "{speeds_meters} m"
+                    },
+                    {
+                        "name": "Футове:",
+                        "value": "{speeds_feet} ft"
+                    },
+                    {
+                        "name": "Мегаметри:",
+                        "value": "{speeds_megameters} Mm"
+                    },
+                    {
+                        "name": "Константи (скорост на светлината):",
+                        "value": "{speeds_light} C"
+                    }
+                ],
+                "footer": {
+                    "text": "Избрано: {speed_unit_value}"
+                }
+            }
+        ],
+        "translator_id": "236831708354314240"
+    }
+}
