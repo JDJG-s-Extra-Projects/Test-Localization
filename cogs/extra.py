@@ -5,13 +5,12 @@ import traceback
 import typing
 import zoneinfo
 
-from babel.numbers import format_decimal
 import discord
 from discord import app_commands
 from discord.app_commands import Choice
 from discord.ext import commands
 
-from local_utils import Speed, Temperature, locale_choices, get_locale_timezones
+from local_utils import Speed, Temperature, locale_choices
 from utils import fuzzy
 
 if typing.TYPE_CHECKING:
@@ -66,11 +65,10 @@ class Extra(commands.Cog):
         else:
             color = 0xFF0000
 
-        cleaned_locale = interaction.locale.value.replace("-", "_")
-        temp_celsius = format_decimal(temps.celsius, format="#,##0.0", locale=cleaned_locale)
-        temp_fahrenheit = format_decimal(temps.fahrenheit, format="#,##0.0", locale=cleaned_locale)
-        temp_kelvin = format_decimal(temps.kelvin, format="#,##0.0", locale=cleaned_locale)
-        temp_rankine = format_decimal(temps.rankine, format="#,##0.0", locale=cleaned_locale)
+        temp_celsius = f"{temps.celsius:,}"
+        temp_fahrenheit = f"{temps.fahrenheit:,}"
+        temp_kelvin = f"{temps.kelvin:,}"
+        temp_rankine = f"{temps.rankine:,}"
 
         temperature_unit_value = (
             await interaction.client.tree.translator.translate_choice_name_from_locale_key(
@@ -173,13 +171,12 @@ class Extra(commands.Cog):
             color = 0x0
             # pure black for emphasis.
 
-        cleaned_locale = interaction.locale.value.replace("-", "_")
-        speeds_miles = format_decimal(speeds.miles, format="#,##0.0", locale=cleaned_locale)
-        speeds_kilometers = format_decimal(speeds.kilometers, format="#,##0.0", locale=cleaned_locale)
-        speeds_meters = format_decimal(speeds.meters, format="#,##0.0", locale=cleaned_locale)
-        speeds_feet = format_decimal(speeds.feet, format="#,##0.0", locale=cleaned_locale)
-        speeds_megameters = format_decimal(speeds.megameters, format="#,##0.00", locale=cleaned_locale)
-        speeds_light = format_decimal(speeds.light, format="#,##0.00", locale=cleaned_locale)
+        speeds_miles = f"{speeds.miles:,}"
+        speeds_kilometers = f"{speeds.kilometers:,}"
+        speeds_meters = f"{speeds.meters:,}"
+        speeds_feet = f"{speeds.feet:,}"
+        speeds_megameters = f"{speeds.megameters:,}"
+        speeds_light = f"{speeds.light:,}"
 
         speed_unit_value = (
             await interaction.client.tree.translator.translate_choice_name_from_locale_key(
@@ -264,20 +261,13 @@ class Extra(commands.Cog):
     async def convert_timezone_autocomplete(self, interaction: discord.Interaction, current: str) -> list[Choice]:
 
         timezones = self.available_timezones
-        timezones_dictionary = dict([(timezone, timezone) for timezone in timezones])
-        localized_timezones = await asyncio.to_thread(get_locale_timezones, interaction.locale, timezones)
-        localized_timezones = localized_timezones | timezones_dictionary
-        # combines the two dictionaries
-
-        all_choices = [
-            Choice(name=timezone, value=timezone_value) for timezone, timezone_value in localized_timezones.items()
-        ]
+        all_choices = [Choice(name=timezone, value=timezone) for timezone in timezones]
 
         if not (current):
             return all_choices[0:25]
 
-        filtered_results = fuzzy.finder(current, localized_timezones.keys())
-        results = [Choice(name=result, value=localized_timezones[result]) for result in filtered_results]
+        filtered_results = fuzzy.finder(current, timezones)
+        results = [Choice(name=result, value=result) for result in filtered_results]
 
         return results[0:25]
 

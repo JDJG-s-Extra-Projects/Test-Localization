@@ -1,10 +1,6 @@
-import datetime
 import enum
 from typing import TYPE_CHECKING, Any, NamedTuple
-import zoneinfo
 
-from babel import Locale
-from babel.dates import get_timezone_name
 from discord import app_commands
 from discord.app_commands import locale_str
 
@@ -151,27 +147,3 @@ def locale_choices(
         )
         for i, (name, value) in enumerate(_choices.items())
     ]
-
-
-def get_locale_timezones(locale: str, timezones: list[str]):
-    cleaned_locale = locale.value.replace(
-        "-",
-        "_",
-    )
-    # babel needs it for it to work
-
-    localized_timezones = {}
-    for timezone in timezones:
-        timezone_localized = get_timezone_name(timezone, locale=Locale.parse(cleaned_locale))
-
-        if timezone_localized.lower().startswith("unknown region"):
-            localized_datetime = datetime.datetime.now(tz=zoneinfo.ZoneInfo(timezone))
-            timezone_localized = get_timezone_name(localized_datetime, locale=Locale.parse(cleaned_locale))
-
-            if timezone_localized.lower().startswith("unknown region"):
-                print(timezone_localized)
-                timezone_localized = timezone
-
-        localized_timezones[timezone_localized] = timezone
-
-    return localized_timezones
