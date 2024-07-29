@@ -64,7 +64,7 @@
             },
             "speed": {
                 "name": "速度",
-                "description": "請輸入一個數字"
+                "description": "請輸入數字"
             }
         },
         "embeds": [
