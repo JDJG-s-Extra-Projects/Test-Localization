@@ -1,7 +1,9 @@
 from __future__ import annotations
 
+import asyncio
 import traceback
 import typing
+import zoneinfo
 
 import discord
 from discord import app_commands
@@ -205,6 +207,65 @@ class Extra(commands.Cog):
 
     @convert_speed.error
     async def convert_speed_error(self, interaction: discord.Interaction, error):
+        await interaction.response.send_message(f"{error}! Please Send to this to my developer", ephemeral=True)
+        print(interaction.command)
+        traceback.print_exc()
+
+    @app_commands.user_install()
+    @app_commands.guild_install()
+    @app_commands.allowed_contexts(guilds=True, dms=True, private_channels=True)
+    @app_commands.describe(
+        timezone="Select the timezone you would like to convert to.",
+    )
+    @app_commands.command(description="A command to convert the message timestamp to the region's time.")
+    async def convert_timezone(self, interaction: discord.Interaction, timezone: typing.Optional[str] = None):
+
+        timezones = self.available_timezones
+
+        if not timezone:
+            timestamp = discord.utils.format_dt(interaction.created_at)
+            embed = discord.Embed(title="Time:", description=timestamp)
+            embed.set_footer(text="Timezone: Not Specified")
+
+        elif not timezone in timezones:
+            timestamp = discord.utils.format_dt(interaction.created_at)
+            embed = discord.Embed(title="Time:", description=timestamp)
+            embed.set_footer(text="Timezone: Not Found")
+
+        else:
+            now_tz = interaction.created_at.astimezone(zoneinfo.ZoneInfo(timezone))
+            am_pm_format = now_tz.strftime("%I:%M:%S %p")
+            twenty_four_format = now_tz.strftime("%H:%M:%S")
+            first_format = now_tz.strftime("%Y-%d-%m")
+            second_format = now_tz.strftime("%d-%m-%Y")
+            third_format = now_tz.strftime("%m-%d-%Y")
+
+            # possibly do colors depending on time but not sure.
+
+            embed = discord.Embed(
+                title="Time:",
+                description=f"12 hour: {am_pm_format}\n24 hour: {twenty_four_format}\n\nYYYY-DD-MM: {first_format}\nDD-MM-YYYY: {second_format}\nMM-DD-YYYY: {third_format}",
+            )
+            embed.set_footer(text=f"Timezone: {timezone}")
+
+        await interaction.response.send_message(embed=embed)
+
+    @convert_timezone.autocomplete("timezone")
+    async def convert_timezone_autocomplete(self, interaction: discord.Interaction, current: str) -> list[Choice]:
+
+        timezones = self.available_timezones
+        all_choices = [Choice(name=timezone, value=timezone) for timezone in timezones]
+
+        if not (current):
+            return all_choices[0:25]
+
+        filtered_results = fuzzy.finder(current, timezones)
+        results = [Choice(name=result, value=result) for result in filtered_results]
+
+        return results[0:25]
+
+    @convert_timezone.error
+    async def convert_timezone_error(self, interaction: discord.Interaction, error):
         await interaction.response.send_message(f"{error}! Please Send to this to my developer", ephemeral=True)
         print(interaction.command)
         traceback.print_exc()
