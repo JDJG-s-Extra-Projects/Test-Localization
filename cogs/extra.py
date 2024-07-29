@@ -104,16 +104,16 @@ class Extra(commands.Cog):
         print(interaction.command)
         traceback.print_exc()
 
+    @app_commands.command(
+        description="A command to convert speeds to different scales",
+        auto_locale_strings=True,
+    )
     @app_commands.user_install()
     @app_commands.guild_install()
     @app_commands.allowed_contexts(guilds=True, dms=True, private_channels=True)
     @app_commands.describe(
         speed_unit="Select a Unit of Speed from the dropdown.",
         speed="Please enter a number",
-    )
-    @app_commands.command(
-        description="A command to convert speeds to different scales",
-        auto_locale_strings=True,
     )
     @app_commands.choices(
         speed_unit=locale_choices(
