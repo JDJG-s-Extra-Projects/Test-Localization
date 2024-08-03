@@ -59,7 +59,7 @@
                     "미터",
                     "피트",
                     "메가미터",
-                    "상수 (빛의 속도)"
+                    "상수 (광속)"
                 ]
             },
             "speed": {
@@ -92,7 +92,7 @@
                         "value": "{speeds_megameters} Mm"
                     },
                     {
-                        "name": "상수 (빛의 속도)",
+                        "name": "상수 (광속)",
                         "value": "{speeds_light} C"
                     }
                 ],

@@ -1,11 +1,11 @@
 {
     "convert_temperature": {
         "name": "转换温度",
-        "description": "一个可以转换温度至不同温标的指令",
+        "description": "一个把温度转换到不同温标的指令",
         "options": {
             "temperature_unit": {
-                "name": "温标单位",
-                "description": "请选择以下一种温度单位",
+                "name": "温标",
+                "description": "请从下拉框中选择一种温标",
                 "choices": [
                     "摄氏度",
                     "华氏度",
@@ -48,17 +48,17 @@
     },
     "convert_speed": {
         "name": "转换速度",
-        "description": "一个可以转换速度到不同速度单位的指令",
+        "description": "一个把速度转换到不同速度单位的指令",
         "options": {
             "speed_unit": {
                 "name": "速度单位",
-                "description": "请选择以下一种速度单位",
+                "description": "请从下拉框中选择一种速度单位",
                 "choices": [
                     "英里",
                     "公里",
-                    "公尺",
+                    "米",
                     "英尺",
-                    "百萬米",
+                    "兆米",
                     "光速"
                 ]
             },
@@ -80,7 +80,7 @@
                         "value": "{speeds_kilometers} km"
                     },
                     {
-                        "name": "公尺",
+                        "name": "米",
                         "value": "{speeds_meters} m"
                     },
                     {
@@ -88,7 +88,7 @@
                         "value": "{speeds_feet} ft"
                     },
                     {
-                        "name": "百萬米",
+                        "name": "兆米",
                         "value": "{speeds_megameters} Mm"
                     },
                     {
