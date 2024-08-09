@@ -7,7 +7,7 @@
                 "name": "unidades_de_temperatura",
                 "description": "Seleccione una unidad de temperatura del menú desplegable",
                 "choices": [
-                    "Celcius",
+                    "Celsius",
                     "Fahrenheit",
                     "Kelvin",
                     "Rankine"
@@ -23,7 +23,7 @@
                 "title": "Temperatura:",
                 "fields": [
                     {
-                        "name": "Celcius:",
+                        "name": "Celsius:",
                         "value": "{temp_celsius} °C"
                     },
                     {
@@ -64,7 +64,7 @@
             },
             "speed": {
                 "name": "velocidad",
-                "description": "Porfavor inserte un número"
+                "description": "Por favor inserte un número"
             }
         },
         "embeds": [
