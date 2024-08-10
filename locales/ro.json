@@ -1,7 +1,7 @@
 {
     "convert_temperature": {
         "name": "convertiți_temperatura",
-        "description": "O comandă pentru a converti temperaturile în diferite scări",
+        "description": "O comandă pentru a converti temperaturile între diferite scale",
         "options": {
             "temperature_unit": {
                 "name": "unitate_de_temperatură",
@@ -15,12 +15,12 @@
             },
             "temperature": {
                 "name": "temperatură",
-                "description": "Vă rugăm să introduceți un număr"
+                "description": "Introduceți un număr"
             }
         },
         "embeds": [
             {
-                "title": "temperatură:",
+                "title": "Temperatură:",
                 "fields": [
                     {
                         "name": "Celsius:",
@@ -40,7 +40,7 @@
                     }
                 ],
                 "footer": {
-                    "text": "Alege: {temperature_unit_value}"
+                    "text": "Alegeți: {temperature_unit_value}"
                 }
             }
         ],
@@ -48,7 +48,7 @@
     },
     "convert_speed": {
         "name": "convertiți_viteza",
-        "description": "O comandă pentru a converti vitezele în diferite scări",
+        "description": "O comandă pentru a converti vitezele între diferite scale",
         "options": {
             "speed_unit": {
                 "name": "unitate_de_viteză",
@@ -57,14 +57,14 @@
                     "Mile",
                     "Kilometri",
                     "Metri",
-                    "feet",
+                    "Picioare",
                     "MegaMetri",
                     "Viteza luminii"
                 ]
             },
             "speed": {
                 "name": "viteză",
-                "description": "Vă rugăm să introduceți un număr"
+                "description": "Introduceți un număr"
             }
         },
         "embeds": [
@@ -84,7 +84,7 @@
                         "value": "{speeds_meters} m"
                     },
                     {
-                        "name": "feet:",
+                        "name": "Picioare:",
                         "value": "{speeds_feet} ft"
                     },
                     {
@@ -97,7 +97,7 @@
                     }
                 ],
                 "footer": {
-                    "text": "Alege: {speed_unit_value}"
+                    "text": "Alegeți: {speed_unit_value}"
                 }
             }
         ],
